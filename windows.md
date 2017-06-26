@@ -4,6 +4,10 @@
 
 [Installing Bash on Windows](https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide)
 
+*NOTE* make sure when it asks you to set a username and password you do (you won't see the password typing characters but it will be recording your entry).
+
+If you see root@... in the window title bar then stop and ask for help.
+
 ## Download and install
 
 - [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html)
@@ -33,7 +37,7 @@ Run all of these in ConEmu:
 ### PHP
 
 - Run `sudo apt-get install php7.0`
-- Check it's working: `php -v`
+- Check it's working: `php -v` you should see something like `PHP 7.x.x (cli)`
 
 ### Composer
 
