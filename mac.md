@@ -8,7 +8,7 @@
 
 ## Download and install
 
-- [Photoshop](http://www.adobe.com/uk/products/photoshop.html)
+- [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (30 day free trial)
 
 ## Install Software with Homebrew
 
