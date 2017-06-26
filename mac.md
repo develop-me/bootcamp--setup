@@ -6,7 +6,11 @@
 - Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 - Follow the instructions on screen
 
-## Install Software
+## Download and install
+
+- [Photoshop](http://www.adobe.com/uk/products/photoshop.html)
+
+## Install Software with Homebrew
 
 - Chrome: `brew install caskroom/cask/google-chrome`
 - Chrome Canary: `brew install caskroom/versions/google-chrome-canary`
