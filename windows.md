@@ -84,8 +84,7 @@ Make sure you run `cd /mnt/c/Users/yourusername` when you first go into command 
 ## Download and create your first virtual machine
 
 1. Navigate to your week5 Coding Fellowship folder, e.g. `cd coding-fellowship/week5`
-1. type `git clone git@github.com:scotch-io/scotch-box.git`
-1. navigate into the new directory with `cd scotch-box`
-1. Windows only: edit `Vagrantfile` and remove this line: `config.vm.hostname = "scotchbox"`
+1. download [this file](https://github.com/scotch-io/scotch-box/archive/master.zip), unzip and place files inside (`public`, `Vagrantfile`, `README.md`) inside your `week5` folder
+1. edit `Vagrantfile` and remove this line: `config.vm.hostname = "scotchbox"`
 1. type `vagrant up`
 1. when completed visit [192.168.33.10](http://192.168.33.10/)
