@@ -22,4 +22,4 @@ A partial list includes:
 
 ## Installation
 
-To make setup easier we have created installation guies for [Windows](https://github.com/develop-me/setup/blob/master/windows.md) and [Macs](https://github.com/develop-me/setup/blob/master/mac.md)
+To make setup easier we have created installation guides for [Windows](https://github.com/develop-me/setup/blob/master/windows.md) and [Mac](https://github.com/develop-me/setup/blob/master/mac.md)
