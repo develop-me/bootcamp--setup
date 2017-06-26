@@ -24,6 +24,8 @@
 - Sass: `brew install libsass ruby && gem install sass` 
 - Composer: `brew install homebrew/php/php70 homebrew/php/composer`
 
+Our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
+
 Or, to run as one command:
 
 ```
