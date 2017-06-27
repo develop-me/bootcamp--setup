@@ -2,10 +2,10 @@
 
 ## Automatic Install
 
-Download the `mac.sh` file and save it to your home directory (e.g. `/Users/yourname`). Next open the Terminal app and run the following:
+Download the `setup.sh` file and save it to your home directory (e.g. `/Users/yourname`). Next open the Terminal app and run the following:
 
 ```
-cd ~ && sh ./mac.sh
+cd ~ && sh ./setup.sh
 ```
 
 Once the setup is complete you can delete the file.
