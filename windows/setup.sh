@@ -9,6 +9,7 @@ printf "\e[35m
  | |_| |  __/\ V /  __/ | (_) | |_) | |  | |  __/     
  |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____ 
                               |_|              |_____|
+
  \e[32m
  Windows Setup Script v1.0
 
@@ -33,8 +34,13 @@ fi
 
 if [ "$USER" == "root" ]; then
     printf "
+ \e[34m
+ You are logged in as the root user
+
+ You'll need to create a new user and then run the
+ setup script again
  
- Pick a username (lowercase, no spaces): "
+ Pick a username (lowercase, no spaces): \e[39m"
     read -r username
 
     # create user
@@ -46,22 +52,21 @@ if [ "$USER" == "root" ]; then
     # set password
     passwd "$username"
 
-    su "$username" 
+    su -l "$username" 
 fi
 
 printf "\e[34m
  Ok, let's go...
-
  \e[39m
 "
 
-mkdir ~/bin
+mkdir "$HOME/bin"
 
 # allow non standard repos
-sudo apt-get install python-software-properties
+sudo apt-get install -y python-software-properties
 
 # add latest node repo
-cd ~
+cd "$HOME" 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
 sudo apt-get install -y git php7.0 ruby nodejs
@@ -76,23 +81,21 @@ ACTUAL_SIGNATURE=$(php -r "echo hash_file('SHA384', 'composer-setup.php');")
 
 if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
 then
-    printf "\e[31mComposer couldn't be installed\e[39m"
+    printf "Composer couldn't be installed"
 else
     php composer-setup.php --quiet
-    cp composer.phar ~/bin/composer
+    mv composer.phar "$HOME/bin/composer"
 fi
 
 rm composer-setup.php
-source ~/.profile
+source "$HOME/.profile"
 
 # ===============================================================
 
 printf "\e[35m
 
+ —————————————————————————————————————————————————————
+
  And we're done!
  \e[39m
 "
-
-sleep 2
-
-exit
