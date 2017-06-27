@@ -53,6 +53,8 @@ if [ "$USER" == "root" ]; then
     passwd "$username"
 
     su -l "$username" 
+
+    exit 0
 fi
 
 printf "\e[34m
