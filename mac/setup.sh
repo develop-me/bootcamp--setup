@@ -28,6 +28,17 @@ gems=(
     sass
 )
 
+vagrant_boxes=(
+    scotch/box
+    laravel/homestead
+)
+
+vagrant_plugins=(
+    vagrant-vbguest
+    vagrant-hostsupdater
+)
+
+
 # ===================================================
 
 clear
@@ -123,6 +134,14 @@ done
 
 # install gems
 gem install "${gems[@]}"
+
+# add vagrant boxes
+for i in "${vagrant_boxes[@]}"
+do
+    vagrant box add "$i" --provider virtualbox
+done
+
+vagrant plugin install "${vagrant_plugins[@]}"
 
 printf "\e[35m
 

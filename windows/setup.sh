@@ -6,6 +6,16 @@ vagrant_version="1.9.5"
 php_version="7.0"
 node_version="8.x"
 
+vagrant_boxes=(
+    scotch/box
+    laravel/homestead
+)
+
+vagrant_plugins=(
+    vagrant-vbguest
+    vagrant-hostsupdater
+)
+
 # ===============================================================
 
 clear
@@ -109,6 +119,15 @@ sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
 printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.profile"
 
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+
+# add vagrant boxes
+for i in "${vagrant_boxes[@]}"
+do
+    vagrant box add "$i" --provider virtualbox
+done
+
+vagrant plugin install "${vagrant_plugins[@]}"
 
 # ===============================================================
 
