@@ -1,5 +1,13 @@
 #! /bin/bash
 
+# ===============================================================
+
+vagrant_version="1.9.5"
+php_version="7.0"
+node_version="8.x"
+
+# ===============================================================
+
 clear
 
 printf "\e[35m
@@ -69,9 +77,9 @@ sudo apt-get install -y python-software-properties
 
 # add latest node repo
 cd "$HOME" 
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 
-sudo apt-get install -y git php7.0 ruby nodejs
+sudo apt-get install -y git "php${php_version}" ruby nodejs
 sudo gem install sass
 
 # ===============================================================
@@ -91,6 +99,17 @@ fi
 
 rm composer-setup.php
 source "$HOME/.profile"
+
+# ===============================================================
+
+# vagrant
+
+cd "$HOME"
+wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
+sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
+
+printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.profile"
+
 
 # ===============================================================
 
