@@ -13,22 +13,22 @@
 ## Setting up ConEmu 
 
 - Download and install [https://conemu.github.io](https://conemu.github.io)
-- When ConEmu first loads select the {Bash::bash} as the startup task
-- When prompted to type "y" to agree to the Ubuntu T&Cs
-- When prompted to type "y" to set the locale
-- When prompted enter a username: this should be all lowercase with no spaces
-- When prompted enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security)
+- When ConEmu first loads select {Bash::bash} as the startup task
+- When prompted, type `y` to agree to the Ubuntu T&Cs
+- When prompted, type `y` to set the locale
+- When prompted, enter a username: this should be all lowercase with no spaces
+- When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security)
 
 
 ## Installing command line tools
 
-Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourname\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
+Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
 
 ```
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.profile
 ```
 
-Once the setup is complete you can delete the `setup.sh` file. You should also quit ConEmu, this will make sure any changes are saved.
+Once the setup is complete you can delete the `setup.sh` file.
 
 ## Download and install
 
