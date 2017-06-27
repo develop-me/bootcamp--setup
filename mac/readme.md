@@ -2,7 +2,7 @@
 
 ## Automatic Install
 
-Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/mac/setup.sh) file (right click and "Download Linked File") and move it to your home directory (e.g. `/Users/yourname`). Next open the Terminal app and run the following:
+Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/mac/setup.sh) file and save it to your home directory (e.g. `/Users/yourname`). Next open the Terminal app and run the following:
 
 ```
 cd ~ && sh ./setup.sh
