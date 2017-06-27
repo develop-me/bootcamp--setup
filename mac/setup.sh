@@ -13,6 +13,7 @@ apps=(
     caskroom/cask/filezilla
     caskroom/cask/vagrant
     caskroom/cask/virtualbox
+    caskroom/cask/iterm2
 )
 
 cli=(
@@ -64,6 +65,7 @@ printf "\e[35m
  • FileZilla: old-skool file transfer 
  • Vagrant: for running development environments 
  • Virtualbox: helps Vagrant out 
+ • iTerm2: a nicer terminal 
 
 
  It will also install the following command line tools:

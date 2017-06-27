@@ -10,6 +10,7 @@
 - [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (30 day free trial)
 - [Vagrant](https://www.vagrantup.com/)
 - [Virtualbox](https://www.virtualbox.org/)
+- [ConEmu](https://conemu.github.io)
 
 
 ## Setting up Bash for Windows 
@@ -24,7 +25,7 @@
 
 ## Setting up ConEmu 
 
-- Download and install [https://conemu.github.io](https://conemu.github.io)
+- Open ConEmu
 - When ConEmu first loads select {Bash::bash} as the startup task
 - When prompted, type `y` to agree to the Ubuntu T&Cs
 - When prompted, type `y` to set the locale
