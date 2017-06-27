@@ -93,7 +93,7 @@ if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
 then
     printf "Composer couldn't be installed"
 else
-    php composer-setup.php --quiet
+    php composer-setup.php
     mv composer.phar "$HOME/bin/composer"
 fi
 

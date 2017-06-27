@@ -1,28 +1,34 @@
 # Setting up Windows
 
-## Initial Setup of Bash
+## Setting up Bash for Windows 
 
 **Make sure you're running the latest version of Windows 10. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work.**
 
-[Installing Bash on Windows](https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide)
+- Type "developers" into the search bar, then click on the "For developers settings option"
+- In the window that appears select "Developer Mode", then click on "Yes" when prompted
+- Type "windows features" into the search bar, then click on "Turn Windows features on or off"
+- In the window that appears tick the box named "Windows Subsystem for Linux (Beta)", then click on "OK"
+- Restart your computer
 
-**NOTE:** Make sure when it asks you to set a username and password you do (you won't see the password typing characters but it will be recording your entry).
-
-## Install ConEmu
+## Setting up ConEmu 
 
 - Download and install [https://conemu.github.io](https://conemu.github.io)
-- When it first loads select the {Bash::bash} as the startup task
-- Use ConEmu for all command line work 
+- When ConEmu first loads select the {Bash::bash} as the startup task
+- When prompted to type "y" to agree to the Ubuntu T&Cs
+- When prompted to type "y" to set the locale
+- When prompted enter a username: this should be all lowercase with no spaces
+- When prompted enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security)
 
-## Install Command Line Apps
 
-Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh) file and save it to your home directory (e.g. `C:\Users\yourname`). Next open the ConEmu app and run the following:
+## Installing command line tools
+
+Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourname\Downloads`). Next, in ConEmu app, run the following:
 
 ```
-/mnt/c/Users/yourname/setup.sh
+/mnt/c/Users/yourname/Downloads/setup.sh
 ```
 
-Once the setup is complete you can delete the file.
+Once the setup is complete you can delete the `setup.sh` file. You should also quit ConEmu, this will make sure any changes are saved.
 
 ## Download and install
 
