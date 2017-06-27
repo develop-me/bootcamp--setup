@@ -22,10 +22,10 @@
 
 ## Installing command line tools
 
-Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourname\Downloads`). Next, in ConEmu app, run the following:
+Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourname\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
 
 ```
-/mnt/c/Users/yourname/Downloads/setup.sh
+/mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.profile
 ```
 
 Once the setup is complete you can delete the `setup.sh` file. You should also quit ConEmu, this will make sure any changes are saved.

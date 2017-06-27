@@ -98,7 +98,6 @@ else
 fi
 
 rm composer-setup.php
-source "$HOME/.profile"
 
 # ===============================================================
 
