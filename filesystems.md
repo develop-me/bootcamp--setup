@@ -82,6 +82,16 @@ To get back to the `my-website` folder (going back "up" the tree) you might run:
 
 You can check your current location in the filesystem with `pwd` (print working directory).
 
+### Structuring your projects
+
+On the command line case matters: `cd documents` is different from `cd Documents`, so you'll need to remember if the folder/file has any capital letters in it or not.
+
+Spaces cause issues because when the command line sees a space it assumes it is another part of the command, e.g. `cd Documents/My Directory` is seen as `cd Documents/My` followed by a second command (and `cd` only accepts one). You can avoid this by surrounding the argument in quotation marks: `cd "Documents/My Directory"`
+
+However, you can avoid having to think about these issues by using a simple naming convention: always user lowercase and use hyphens instead of spaces. This will mean you never have to worry about using quotation marks or whether you used a capital letter or not.
+
+When we get to Laravel at the end of the course you'll see that sometimes we *have* to use mixed-case naming for our code to work, but you should never need to have spaces in your filenames.
+
 ## Absolute vs. relative paths
 
 TODO
@@ -99,8 +109,8 @@ If using bash for Windows or ConEmu your home directory is at: `/mnt/c/Users/YOU
 
 ### Windows
 
-TODO
+If you're using Bash/ConEmu then your other Windows drives, if you have any, will appear in the `/mnt` directory. For example, say you had a secondary `D:` drive, this would located at `/mnt/d`
 
 ### Mac
 
-TODO
+On Mac your other drives, if you have any, will appear in the `/Volumes` directory. For example, say you had a secondary "Backups", this would be located at `/Volumes/Backups`
