@@ -80,7 +80,7 @@ To get back to the `my-website` folder (going back "up" the tree) you might run:
 
 `cd ..`
 
-You can check 
+You can check your current location in the filesystem with `pwd` (print working directory).
 
 ## Absolute vs. relative paths
 
