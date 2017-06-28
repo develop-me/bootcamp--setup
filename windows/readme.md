@@ -35,7 +35,7 @@ After your computer has restarted:
 
 ## Installing command line tools
 
-Download the [`setup.sh`](https://cdn.rawgit.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/master/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
 
 ```
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.profile
