@@ -2,10 +2,10 @@
 
 ## Automatic Install
 
-[Click here to Download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/master/mac/setup.sh) and save it to your home directory (e.g. `/Users/yourname`). Next open the Terminal app and run the following:
+[Click here to Download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/master/mac/setup.sh) and save it to your Downloads directory (e.g. `/Users/yourname/Downloads`). Next open the Terminal app and run the following:
 
 ```
-cd ~ && sh ./setup.sh
+bash ~/Downloads/setup.sh
 ```
 
 Once the setup is complete you can delete the file.
