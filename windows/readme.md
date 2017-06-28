@@ -19,7 +19,7 @@
 
 **Make sure that Vagrant and ConEmu are installed before continuing.**
 
-- Type "developers" into the search bar, then click on the "For developers settings option"
+- Type "developers" into the search bar, then click on "For developers settings"
 - In the window that appears select "Developer Mode", then click on "Yes" when prompted
 - Type "windows features" into the search bar, then click on "Turn Windows features on or off"
 - In the window that appears tick the box named "Windows Subsystem for Linux (Beta)", then click on "OK"
@@ -37,7 +37,7 @@ After your computer has restarted:
 
 ## Installing command line tools
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/854dabf4f186c60463d53af8de0622638fb058c6/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/854dabf4f186c60463d53af8de0622638fb058c6/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
 
 ```
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.profile
