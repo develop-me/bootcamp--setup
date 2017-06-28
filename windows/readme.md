@@ -1,5 +1,7 @@
 # Setting up Windows
 
+**Make sure you're running the latest version of Windows 10. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work.**
+
 ## Download and install
 
 - [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html)
@@ -15,7 +17,7 @@
 
 ## Setting up Bash for Windows 
 
-**Make sure you're running the latest version of Windows 10. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work.**
+**Make sure that Vagrant and ConEmu are installed before continuing.**
 
 - Type "developers" into the search bar, then click on the "For developers settings option"
 - In the window that appears select "Developer Mode", then click on "Yes" when prompted
