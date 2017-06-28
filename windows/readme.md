@@ -23,7 +23,7 @@
 - In the window that appears tick the box named "Windows Subsystem for Linux (Beta)", then click on "OK"
 - Restart your computer
 
-## Setting up ConEmu 
+After your computer has restarted:
 
 - Open ConEmu
 - When ConEmu first loads select {Bash::bash} as the startup task
@@ -35,7 +35,7 @@
 
 ## Installing command line tools
 
-Download the [`setup.sh`](https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
+Download the [`setup.sh`](https://cdn.rawgit.com/develop-me/setup/master/windows/setup.sh) file and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu app, run the following (replace `yourusername` with your Windows username):
 
 ```
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.profile
