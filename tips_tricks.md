@@ -4,19 +4,21 @@ How you use your computer as a developer differs from how you would as an everyd
 
 ## Everyday keyboard shortcuts
 
-- **Switch application:** `alt/ctrl + tab`
+For each with give commands as `Mac` / `Windows`.
 
-- **Copy:** `cmd/ctrl + c`
-- **Paste:** `cmd/ctrl + v`
-- **Cut:** `cmd/ctrl + x`
+- **Switch application:** `alt + tab` / `Ctrl + tab`
 
-- **Save file:** `cmd/ctrl + s`
-- **New file:** `cmd/ctrl + n`
+- **Copy:** `cmd + c` / `Ctrl + c`
+- **Paste:** `cmd + v` / `Ctrl + v`
+- **Cut:** `cmd + x` / `Ctrl + x`
 
-- **New tab:** `cmd/ctrl + t`
+- **Save file:** `cmd + s` / `Ctrl + s`
+- **New file:** `cmd + n` / `Ctrl + n`
+
+- **New tab:** `cmd + t` / `Ctrl + t`
 
 ## Coding in Sublime
 
-- **Copy whole line:** `cmd/ctrl + c` with nothing selected, copies line cursor is on
-- **Move whole line up:** `cmd+ctrl + ⬆`
-- **Move whole line down:** `cmd+ctrl + ⬇`
+- **Copy whole line:** with nothing selected `cmd + c` / `Ctrl + c` copies entire line the cursor is on
+- **Move whole line up:** `cmd + ctrl + ↑` / `Ctrl + ⇧ + ↑` (Ctrl + shift + cursor up)
+- **Move whole line down:** `cmd + ctrl + ↓` / `Ctrl + ⇧ + ↓` (Ctrl + shift + cursor down)
