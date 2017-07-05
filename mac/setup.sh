@@ -17,6 +17,7 @@ apps=(
 )
 
 cli=(
+    wget
     git
     node
     libsass 
@@ -38,6 +39,10 @@ vagrant_plugins=(
     vagrant-vbguest
     vagrant-hostsupdater
 )
+
+sublime_plugins='[
+    "Laravel Blade Highlighter"
+]'
 
 
 # ===================================================
@@ -148,6 +153,16 @@ vagrant plugin install "${vagrant_plugins[@]}"
 # setup Sublime Text command line
 mkdir -p ~/.bin
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/.bin/subl" ~/bin/subl
+
+# setup Sublime Text plugins
+stpath="$HOME/Library/Application Support/Sublime Text 3"
+
+if [ ! -f "$stpath/Installed Packages/Package Control.sublime-package" ]; then
+    mkdir -p "$stpath/Installed Packages" 
+    mkdir -p "$stpath/Packages/User" 
+    wget https://packagecontrol.io/Package%20Control.sublime-package -P "$stpath/Installed Packages"
+    echo "{\"installed_packages\": ${sublime_plugins}}" > "$stpath/Packages/User/Package Control.sublime-settings"
+fi
 
 # setup bash profile
 echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:$PATH" >> ~/.bashrc
