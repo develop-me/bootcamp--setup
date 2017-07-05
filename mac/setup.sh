@@ -145,6 +145,13 @@ done
 
 vagrant plugin install "${vagrant_plugins[@]}"
 
+# setup Sublime Text command line
+mkdir -p ~/.bin
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/.bin/subl" ~/bin/subl
+
+# setup bash profile
+echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:$PATH" >> ~/.bashrc
+
 printf "\e[35m
 
  And we're done!
