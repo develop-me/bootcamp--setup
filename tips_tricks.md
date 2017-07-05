@@ -19,6 +19,10 @@ For each with give commands as `Mac` / `Windows`.
 
 ## Coding in Sublime
 
+To get started with Sublime you should open the folder containing the current project/files that you're working on:
+
+![Opening a folder in Sublime Text](https://github.com/develop-me/setup/raw/img/open.gif)
+
 - **Open file:** `cmd + p` / `Ctrl + p` and start typing filename
 ![Ctrl-p in Sublime Text](https://github.com/develop-me/setup/raw/img/ctrl-p.gif)
 
