@@ -19,6 +19,9 @@ For each with give commands as `Mac` / `Windows`.
 
 ## Coding in Sublime
 
+- **Open file:** `cmd + p` / `Ctrl + p` and start typing filename
+![Ctrl-p in Sublime Text](https://github.com/develop-me/setup/raw/img/ctrl-p.gif)
+
 - **Copy whole line:** with nothing selected `cmd + c` / `Ctrl + c` copies entire line the cursor is on
 - **Move whole line up:** `cmd + ctrl + ↑` / `Ctrl + ⇧ + ↑` (Ctrl + shift + cursor up)
 - **Move whole line down:** `cmd + ctrl + ↓` / `Ctrl + ⇧ + ↓` (Ctrl + shift + cursor down)
