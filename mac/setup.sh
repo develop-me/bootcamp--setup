@@ -41,7 +41,9 @@ vagrant_plugins=(
 )
 
 sublime_plugins='[
-    "Laravel Blade Highlighter"
+    "Laravel Blade Highlighter",
+    "SCSS",
+    "SideBarEnhancements"
 ]'
 
 
