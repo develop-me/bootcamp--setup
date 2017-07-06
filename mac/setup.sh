@@ -20,7 +20,7 @@ cli=(
     wget
     git
     node
-    libsass 
+    libsass
     ruby
     homebrew/php/php70
     homebrew/php/composer
@@ -43,6 +43,7 @@ vagrant_plugins=(
 sublime_plugins='[
     "Laravel Blade Highlighter",
     "Sass",
+    "Babel",
     "PHP-Twig",
     "SideBarEnhancements"
 ]'
@@ -53,11 +54,11 @@ sublime_plugins='[
 clear
 
 printf "\e[35m
-  ____                 _             __  __           
- |  _ \  _____   _____| | ___  _ __ |  \/  | ___      
- | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| |\/| |/ _ \     
- | |_| |  __/\ V /  __/ | (_) | |_) | |  | |  __/     
- |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____ 
+  ____                 _             __  __
+ |  _ \  _____   _____| | ___  _ __ |  \/  | ___
+ | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| |\/| |/ _ \
+ | |_| |  __/\ V /  __/ | (_) | |_) | |  | |  __/
+ |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____
                               |_|              |_____|
  \e[32m
  Mac Setup Script v1.0
@@ -66,22 +67,22 @@ printf "\e[35m
 
  This will install the following apps:
 
- • Chrome: a web developer's best friend 
- • Chrome Canary: a web developer's unstable friend 
- • Slack: communication is important 
- • Sublime Text 3: text editor of choice 
- • FileZilla: old-skool file transfer 
- • Vagrant: for running development environments 
- • Virtualbox: helps Vagrant out 
- • iTerm2: a nicer terminal 
+ • Chrome: a web developer's best friend
+ • Chrome Canary: a web developer's unstable friend
+ • Slack: communication is important
+ • Sublime Text 3: text editor of choice
+ • FileZilla: old-skool file transfer
+ • Vagrant: for running development environments
+ • Virtualbox: helps Vagrant out
+ • iTerm2: a nicer terminal
 
 
  It will also install the following command line tools:
 
  • Git: version control made simple(ish)
- • Node: JavaScript on the command line 
- • Sass: makes CSS betterer 
- • Composer: installs all the PHP things 
+ • Node: JavaScript on the command line
+ • Sass: makes CSS betterer
+ • Composer: installs all the PHP things
 
  —————————————————————————————————————————————————————
 
@@ -129,7 +130,7 @@ done
 
 printf "\e[34m
 
- Finally, we'll install the command line apps 
+ Now we'll install the command line apps
  \e[39m
 "
 
@@ -145,6 +146,14 @@ done
 # install gems
 gem install "${gems[@]}"
 
+printf "\e[34m
+
+ Next we're going to download some Vagrant boxes
+ \e[39m
+"
+
+sleep 2
+
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
 do
@@ -153,22 +162,30 @@ done
 
 vagrant plugin install "${vagrant_plugins[@]}"
 
+printf "\e[34m
+
+ Finally, we're going to setup Sublime Text
+ \e[39m
+"
+
+sleep 2
+
 # setup Sublime Text command line
-mkdir -p ~/.bin
+mkdir -p "$HOME/.bin"
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/.bin/subl" ~/bin/subl
 
 # setup Sublime Text plugins
 stpath="$HOME/Library/Application Support/Sublime Text 3"
 
 if [ ! -f "$stpath/Installed Packages/Package Control.sublime-package" ]; then
-    mkdir -p "$stpath/Installed Packages" 
-    mkdir -p "$stpath/Packages/User" 
+    mkdir -p "$stpath/Installed Packages"
+    mkdir -p "$stpath/Packages/User"
     wget https://packagecontrol.io/Package%20Control.sublime-package -P "$stpath/Installed Packages"
     echo "{\"installed_packages\": ${sublime_plugins}}" > "$stpath/Packages/User/Package Control.sublime-settings"
 fi
 
 # setup bash profile
-echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:$PATH" >> ~/.bashrc
+echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bashrc"
 
 printf "\e[35m
 
