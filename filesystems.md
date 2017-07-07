@@ -8,19 +8,28 @@ Having this skill will enable you to quickly move to where you need to get to, e
 
 ## LAMP stack: Linux, Apache, MySQL, PHP
 
-TODO: why using unix/linux-style on the course is best
+On the Coding Fellowship we teach PHP as our back-end technology.
 
+PHP websites and applications commonly run on a hosting environment known as LAMP, due to running *L*inux as the operating system, *A*pache as the web server, *M*ySQL as the database system and *P*HP as the dynamic scripting language.
+
+66.5% of websites on the internet run on Unix/Linux servers.
+
+For this reason an understanding of how paths on Unix/Linux systems work is essential.
 
 ## The difference between Windows and Unix-like filesystems (Mac OS X, Linux, etc.)
 
-TODO
+Linux is a Unix-like operating system, and Mac OS X is built on Unix too.
+
+For this reason Unix, Linux and OS X share a common file path approach, the way the operating system represents the location of files and folders, with forwardslashes `/` separating folder names, e.g. `Documents/Invoices`, and the root or base of the operating system being represented `/`.
+
+Windows has a different file path approach, with folder names separated by backslashes `\`, and the base of the operating system's hard drive being commonly represented by `C:\` (the C drive).
 
 ### Windows: C:
 
 An example folder structure on a Windows machine:
 
 ```
-+-- C: (root of file system, your main harddrive)
++-- C: (root of file system, your main hard drive)
 |   +-- Program Files
 |   +-- Users
 |   |   +-- YOURUSERNAME
@@ -94,16 +103,66 @@ When we get to Laravel at the end of the course you'll see that sometimes we *ha
 
 ## Absolute vs. relative paths
 
-TODO
+Given a Unix file system:
+
+```
++-- / (root of file system)
+|   +-- Websites
+|   |   +-- portfolio-website
+|   |   |   +-- css
+|   |   |   |   +-- stylesheet.css
+|   |   |   +-- images
+|   |   |   |   +-- logo.png
+|   |   |   +-- index.html
+```
+
+The full path to the homepage `index.html` file would be `/Websites/portfolio-website/index.html` and you could load it in your browser at the address `file:///Websites/portfolio-website/index.html`.
+
+If you wanted to pull in your stylesheet you could use:
+
+```
+<link rel="stylesheet" href="css/stylesheet.css">
+```
+
+This would cause the browser to look in the `css` folder, that is in the same directory as `index.html`, to find a file called `stylesheet.css`.
+
+If you wanted to reference you `logo.png` file from the stylesheet you could use the absolute path to it, e.g.:
+
+```
+header {
+  background-image: url(/Websites/portfolio-website/images/logo.png);
+}
+```
+
+Or you could use the relative path, using the stylesheet as a starting point you'd need to go back 'up' the tree from the `css` folder with `../` before going back down into the `images` folder:
+
+```
+header {
+  background-image: url(../images/logo.png);
+}
+```
+
+### Advantages of relative path
+
+If you were to rename your website's folder from `portfolio-website` to `my-website` then the absolute path method would break! As we used:
+
+```
+header {
+  background-image: url(/Websites/portfolio-website/images/logo.png);
+}
+```
+
+And the folder is no longer called `portfolio-website`.
+
+But, if we used the relative path, then everything would work fine.
 
 ## Your home folder
 
-TODO
+Your user account on your computer has a home directory, which is protected and only accessibly by your account.
 
+This is commonly where your Documents, Music, Pictures, etc. folders are.
 
-### Windows
-
-If using bash for Windows or ConEmu your home directory is at: `/mnt/c/Users/YOURUSERNAME/`
+There is a Unix-style shortcut to getting to your homefolder, which has the alias `~`, so, you could type `cd ~/Documents` to get to the `Documents` folder in your user directory quickly.
 
 ## How other harddrives show up on your filesystem
 
