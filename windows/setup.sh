@@ -2,7 +2,7 @@
 
 # ===============================================================
 
-vagrant_version="1.9.5"
+vagrant_version="2.0.0"
 php_version="7.0"
 node_version="8.x"
 
