@@ -13,3 +13,7 @@ Once the setup is complete you can delete the file.
 ## Download and install Photoshop
 
 - [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (30 day free trial)
+
+## Set up a GitHub account
+
+You can [sign up here](https://github.com/join) (the free plan is fine).
