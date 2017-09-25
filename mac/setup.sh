@@ -187,6 +187,9 @@ fi
 # setup bash profile
 echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bashrc"
 
+# show hidden files in Finder
+defaults write com.apple.finder AppleShowAllFiles YES
+
 printf "\e[35m
 
  And we're done!
