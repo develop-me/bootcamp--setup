@@ -2,7 +2,7 @@
 
 # ===============================================================
 
-vagrant_version="2.0.0"
+vagrant_version="2.0.1"
 php_version="7.0"
 node_version="8.x"
 
@@ -89,7 +89,7 @@ sudo apt-get install -y python-software-properties
 cd "$HOME" 
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 
-sudo apt-get install -y git "php${php_version}" ruby nodejs
+sudo apt-get install -y git "php${php_version}" "php${php_version}-zip" ruby nodejs
 sudo gem install sass
 
 # ===============================================================
@@ -118,9 +118,7 @@ cd "$HOME"
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
-printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.profile"
-
-export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"$HOME/bin:$HOME/.composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:$PATH\"" >> "$HOME/.bashrc"
 
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
