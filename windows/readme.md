@@ -2,6 +2,15 @@
 
 **Make sure you're running the latest version of Windows 10. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work.**
 
+## Settings
+
+There are a few settings that will make your life much easier:
+
+- Showing hidden files
+- Showing file extensions
+
+You can set these by opening Windows Explorer and then click on the "View" tab and choosing "Options -> Change folder and search options". In the list of options choose "Show hidden files, folders and drives" and untick "Hide extensions for known file types".
+
 ## Download and install
 
 - [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html)
