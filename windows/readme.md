@@ -46,4 +46,4 @@ After your computer has restarted:
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.bashrc && exit
 ```
 
-Once the setup is complete you can delete the `setup.sh` file.
+The tab should close itself when it's done. Once that happens you can delete the `setup.sh` file.

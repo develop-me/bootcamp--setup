@@ -83,13 +83,14 @@ printf "\e[34m
 mkdir "$HOME/bin"
 
 # allow non standard repos
+sudo apt-get update -y
 sudo apt-get install -y python-software-properties
 
 # add latest node repo
 cd "$HOME" 
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 
-sudo apt-get install -y git "php${php_version}" "php${php_version}-zip" ruby nodejs
+sudo apt-get install -y git "php${php_version}" "php${php_version}-zip" gcc make ruby ruby-dev nodejs
 sudo gem install sass
 
 # ===============================================================
