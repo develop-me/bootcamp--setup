@@ -15,6 +15,7 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 
 - [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html)
 - [Chrome Canary](https://www.google.co.uk/chrome/browser/canary.html)
+- [Firefox](https://www.mozilla.org/firefox)
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [Sublime 3](https://www.sublimetext.com/3)
 - [FileZilla](https://filezilla-project.org/download.php?show_all=1)

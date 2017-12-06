@@ -11,6 +11,7 @@ apps=(
     caskroom/cask/slack
     caskroom/cask/sublime-text
     caskroom/cask/filezilla
+    caskroom/cask/firefox
     caskroom/cask/vagrant
     caskroom/cask/virtualbox
     caskroom/cask/iterm2
