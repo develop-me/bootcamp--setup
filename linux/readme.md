@@ -1,4 +1,6 @@
-# Setting up Linux
+# Setting up Ubuntu 
+
+If you're running a different distribution of Linux let us know and we'll panic a bit and then try and get something working.
 
 ## Download and install
 
@@ -15,7 +17,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 
 ## Installing command line tools
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/da39d65a65d920c274e0095a902dfdb84b48fe61/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/7a3fecdf52b6e753ce993b4a24a22f1587e03433/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
 
 ```
 ~/Downloads/setup.sh && source ~/.bashrc && exit
