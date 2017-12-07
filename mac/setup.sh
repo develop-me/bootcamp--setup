@@ -192,6 +192,7 @@ echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:$(yarn global bin):\$PAT
 
 # show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
+killall Finder
 
 printf "\e[35m
 
