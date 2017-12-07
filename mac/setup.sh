@@ -188,7 +188,7 @@ if [ ! -f "$stpath/Installed Packages/Package Control.sublime-package" ]; then
 fi
 
 # setup bash profile
-echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bashrc"
+echo "export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:$(yarn global bin):\$PATH" >> "$HOME/.bashrc"
 
 # show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
