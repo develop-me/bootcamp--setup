@@ -4,7 +4,7 @@ The Coding Fellowship uses a variety of software during the course.
 
 ## Installation
 
-To make setup easier we have created installation guides for [Windows](https://github.com/develop-me/setup/tree/master/windows) and [Mac](https://github.com/develop-me/setup/tree/master/mac)
+To make setup easier we have created installation guides for [Windows](https://github.com/develop-me/setup/tree/master/windows), [Mac](https://github.com/develop-me/setup/tree/master/mac), and [Linux](https://github.com/develop-me/setup/tree/master/linux)
 
 
 # Preparation for the course
