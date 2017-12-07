@@ -23,6 +23,7 @@ cli=(
     node
     libsass
     ruby
+    yarn
     homebrew/php/php70
     homebrew/php/composer
 )
@@ -70,6 +71,7 @@ printf "\e[35m
 
  • Chrome: a web developer's best friend
  • Chrome Canary: a web developer's unstable friend
+ • Firefox: another close friend 
  • Slack: communication is important
  • Sublime Text 3: text editor of choice
  • FileZilla: old-skool file transfer
