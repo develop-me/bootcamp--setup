@@ -70,7 +70,13 @@ curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 curl -sS https://raw.githubusercontent.com/yarnpkg/releases/gh-pages/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-sudo apt-get install -y git "php${php_version}" "php${php_version}-zip" gcc make ruby ruby-dev nodejs yarn
+# install various things - separate to avoid one error stopping everything
+sudo apt-get install -y git 
+sudo apt-get install -y "php${php_version}" "php${php_version}-zip"
+sudo apt-get install -y gcc make ruby ruby-dev
+sudo apt-get install -y nodejs
+sudo apt-get install -y yarn
+
 sudo gem install sass
 
 # ===============================================================
