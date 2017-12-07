@@ -7,7 +7,6 @@
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [Sublime 3](https://www.sublimetext.com/3)
 - [FileZilla](https://filezilla-project.org/download.php?show_all=1)
-- [Vagrant](https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.msi)
 - [Virtualbox](https://www.virtualbox.org/)
 
 ## Set up a GitHub account

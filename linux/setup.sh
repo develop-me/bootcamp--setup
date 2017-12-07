@@ -50,31 +50,6 @@ if ([ "$input" == "no" ] || [ "$input" == "n" ]); then
     exit 1
 fi
 
-if [ "$USER" == "root" ]; then
-    printf "
- \e[34m
- You are logged in as the root user
-
- You'll need to create a new user and then run the
- setup script again
- 
- Pick a username (lowercase, no spaces): \e[39m"
-    read -r username
-
-    # create user
-    useradd "$username" -m
-
-    # add to sudo group
-    sudo adduser "$username" sudo
-
-    # set password
-    passwd "$username"
-
-    su -l "$username" 
-
-    exit 0
-fi
-
 printf "\e[34m
  Ok, let's go...
  \e[39m
@@ -84,7 +59,7 @@ mkdir "$HOME/bin"
 
 # allow non standard repos
 sudo apt-get update -y
-sudo apt-get install -y python-software-properties
+sudo apt-get install -y curl python-software-properties
 
 cd "$HOME" 
 
@@ -92,7 +67,7 @@ cd "$HOME"
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 
 # add yarn repo
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+curl -sS https://raw.githubusercontent.com/yarnpkg/releases/gh-pages/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo apt-get install -y git "php${php_version}" "php${php_version}-zip" gcc make ruby ruby-dev nodejs yarn
@@ -135,6 +110,11 @@ done
 vagrant plugin install "${vagrant_plugins[@]}"
 
 # ===============================================================
+
+
+# sort out guard/listen issue
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
 
 printf "\e[35m
 
