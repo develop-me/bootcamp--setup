@@ -147,7 +147,7 @@ do
 done
 
 # install gems
-gem install "${gems[@]}"
+/usr/local/bin/gem install "${gems[@]}"
 
 printf "\e[34m
 
@@ -175,7 +175,7 @@ sleep 2
 
 # setup Sublime Text command line
 mkdir -p "$HOME/.bin"
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/.bin/subl" ~/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/.bin/subl" ~/.bin/subl
 
 # setup Sublime Text plugins
 stpath="$HOME/Library/Application Support/Sublime Text 3"
