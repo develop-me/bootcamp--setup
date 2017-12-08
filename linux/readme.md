@@ -1,6 +1,6 @@
 # Setting up Ubuntu 
 
-If you're running a different distribution of Linux let us know and we'll panic a bit and then try and get something working.
+If you're running a different distribution of Linux, let us know and we'll panic a bit and then try and get something working.
 
 ## Download and install
 
@@ -21,7 +21,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 [Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/66955fc4c6a2993404a4d6b6e01a7d2fb9988508/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
 
 ```
-~/Downloads/setup.sh && source ~/.bashrc && exit
+bash ~/Downloads/setup.sh && source ~/.bashrc && exit
 ```
 
 The tab should close itself when it's done. Once that happens you can delete the `setup.sh` file.
