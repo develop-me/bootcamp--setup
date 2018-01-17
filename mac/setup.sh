@@ -190,9 +190,13 @@ fi
 # setup bash profile
 echo "export PATH=/usr/local/bin:$HOME/.bin:$HOME/.composer/vendor/bin:$(yarn global bin):\$PATH" >> "$HOME/.bash_profile"
 
-# show hidden files in Finder
+# show hidden files and file extensions in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 killall Finder
+
+# add shortcut to iCloud
+ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud"
 
 printf "\e[35m
 
