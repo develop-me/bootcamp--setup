@@ -1,5 +1,7 @@
 # Setting up Mac OS X
 
+**Make sure you're running the latest version of macOS. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work.**
+
 ## Automatic Install
 
 [Click here to Download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/065a1e784492bdfbed58e794b64003a14ea1c1b1/mac/setup.sh) and save it to your Downloads directory (e.g. `/Users/yourname/Downloads`). Next open the Terminal app and run the following:
@@ -10,8 +12,9 @@ bash ~/Downloads/setup.sh
 
 Once the setup is complete you can delete the file.
 
-## Download and install Photoshop
+## Download and install
 
+- [XCode](https://itunes.apple.com/gb/app/xcode/id497799835?mt=12) (~5GB, so it will take a while)
 - [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (30 day free trial)
 
 ## Set up a GitHub account
