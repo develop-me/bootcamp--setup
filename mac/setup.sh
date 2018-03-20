@@ -24,6 +24,7 @@ cli=(
     libsass
     ruby
     yarn
+    watchman
     homebrew/php/php70
     homebrew/php/composer
 )
