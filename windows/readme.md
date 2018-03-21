@@ -50,7 +50,7 @@ After your computer has restarted:
 
 ## Installing command line tools
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/582ed6a9c7b8b49072fe7fe96d288d57702abae9/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/22a4d25482db4c6da817d70810c37cb50e868ec7/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
 
 ```
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.bashrc && exit
