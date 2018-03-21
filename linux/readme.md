@@ -1,5 +1,7 @@
 # Setting up Ubuntu 
 
+**Make sure you're running the latest version of Ubuntu. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work. You should *always* keep your operating system and software up to date.**
+
 If you're running a different distribution of Linux, let us know and we'll panic a bit and then try and get something working.
 
 ## Download and install

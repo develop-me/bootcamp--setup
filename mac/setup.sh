@@ -14,9 +14,6 @@ apps=(
     caskroom/cask/firefox
     caskroom/cask/vagrant
     caskroom/cask/virtualbox
-    caskroom/cask/iterm2
-    caskroom/cask/java
-    caskroom/cask/android-studio
 )
 
 cli=(
