@@ -10,7 +10,7 @@
 bash ~/Downloads/setup.sh
 ```
 
-Once the setup is complete you can delete the file.
+Once the setup is complete you can delete the file. **You should also go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.**
 
 ## Download and install
 
