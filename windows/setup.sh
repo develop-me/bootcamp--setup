@@ -3,7 +3,7 @@
 # ===============================================================
 
 vagrant_version="2.0.3"
-php_version="7.0"
+php_version="7.2"
 node_version="8.x"
 
 vagrant_boxes=(
@@ -94,6 +94,10 @@ curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 # add yarn repo
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+# add PHP repo
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
 
 # separate just incase one install breaks the other
 sudo apt-get install -y git

@@ -24,7 +24,7 @@ cli=(
     ruby
     yarn
     watchman
-    homebrew/php/php70
+    php
     homebrew/php/composer
 )
 

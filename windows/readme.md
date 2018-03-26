@@ -57,3 +57,5 @@ After your computer has restarted:
 ```
 
 The tab should close itself when it's done. Once that happens you can delete the `setup.sh` file.
+
+**You should use ConEmu for all command line code throughout the course - if you use Git Bash or other command line interfaces you won't have everything you need installed.**
