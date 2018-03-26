@@ -20,7 +20,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 
 ## Installing command line tools
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/22a4d25482db4c6da817d70810c37cb50e868ec7/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/84851812c63b939f18c091409d0d253a02aa3238/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
 
 ```
 bash ~/Downloads/setup.sh && source ~/.bashrc && exit
