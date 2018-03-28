@@ -15,7 +15,7 @@ Once the setup is complete you can delete the file. **You should also go into "S
 ## Download and install
 
 - [XCode](https://itunes.apple.com/gb/app/xcode/id497799835?mt=12) (~5GB, so it will take a while)
-- [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (30 day free trial)
+- [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (14 day free trial)
 
 ## Set up a GitHub account
 
