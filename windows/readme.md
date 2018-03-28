@@ -19,7 +19,7 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [Sublime 3](https://www.sublimetext.com/3)
 - [FileZilla](https://filezilla-project.org/download.php?show_all=1)
-- [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (30 day free trial)
+- [Photoshop](http://www.adobe.com/uk/products/photoshop.html) available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription (14 day free trial)
 - [Vagrant](https://releases.hashicorp.com/vagrant/2.0.3/vagrant_2.0.3_x86_64.msi)
 - [Virtualbox](https://www.virtualbox.org/)
 - [ConEmu](https://conemu.github.io)
