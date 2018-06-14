@@ -136,6 +136,9 @@ sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
 printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:$(yarn global bin):$PATH\"" >> "$HOME/.bashrc"
 
+# vagrant ssh key
+ssh-keygen -t rsa -b 1024 -f "id_rsa" -q
+
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
 do
