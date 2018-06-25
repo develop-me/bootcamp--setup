@@ -96,7 +96,7 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 # add PHP repo
-sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
 
 # separate just incase one install breaks the other
@@ -136,9 +136,6 @@ sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
 printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:$(yarn global bin):$PATH\"" >> "$HOME/.bashrc"
 
-# vagrant ssh key
-ssh-keygen -t rsa -b 1024 -f "id_rsa" -q
-
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
 do
@@ -148,6 +145,9 @@ done
 vagrant plugin install "${vagrant_plugins[@]}"
 
 # ===============================================================
+
+# ssh key
+ssh-keygen -q -N ""
 
 printf "\e[35m
 
