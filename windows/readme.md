@@ -45,6 +45,9 @@ After your computer has restarted:
 
 - Open ConEmu
 - When ConEmu first loads select {Bash::bash} as the startup task
+
+At this point you may get a message about no installed distributions, [follow the link and choose Ubuntu](https://aka.ms/wslstore). Once that is done click on "Launch" and follow the instructions below:
+
 - When prompted, type `y` to agree to the Ubuntu T&Cs
 - When prompted, type `y` to set the locale
 - When prompted, enter a username: this should be all lowercase with no spaces
@@ -52,6 +55,8 @@ After your computer has restarted:
 
 
 ## Installing command line tools
+
+Make sure you're using ConEmu for all command line interactions from now on - **do not** use the Ubuntu terminal.
 
 [Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/e80cb7811f2d192225074a6b1f0847a552641a4a/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
 
