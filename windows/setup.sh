@@ -2,9 +2,9 @@
 
 # ===============================================================
 
-vagrant_version="2.1.1"
+vagrant_version="2.1.2"
 php_version="7.2"
-node_version="8.x"
+node_version="10.x"
 
 vagrant_boxes=(
     scotch/box
@@ -13,7 +13,6 @@ vagrant_boxes=(
 
 vagrant_plugins=(
     vagrant-vbguest
-    vagrant-hostsupdater
 )
 
 # ===============================================================
@@ -147,7 +146,7 @@ vagrant plugin install "${vagrant_plugins[@]}"
 # ===============================================================
 
 # ssh key
-ssh-keygen -q -N ""
+ssh-keygen -q -N "" -f "$HOME/.ssh/id_rsa"
 
 printf "\e[35m
 

@@ -19,9 +19,9 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [Sublime 3](https://www.sublimetext.com/3)
 - [FileZilla](https://filezilla-project.org/download.php?show_all=1)
-- [Vagrant](https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.msi)
+- [Vagrant](https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.msi)
 - [Virtualbox](https://www.virtualbox.org/)
-- [ConEmu](https://conemu.github.io)
+- [ConEmu](https://conemu.github.io) - download the "Installer" version
 
 ## Photoshop
 
@@ -48,10 +48,10 @@ After your computer has restarted:
 
 At this point you may get a message about no installed distributions, [follow the link and choose Ubuntu](https://aka.ms/wslstore). Once that is done click on "Launch" and follow the instructions below:
 
-- When prompted, type `y` to agree to the Ubuntu T&Cs
-- When prompted, type `y` to set the locale
 - When prompted, enter a username: this should be all lowercase with no spaces
 - When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security)
+
+You should quit both the Ubuntu installer app and ConEmu at this point and then start ConEmu again.
 
 
 ## Installing command line tools
@@ -66,4 +66,4 @@ Make sure you're using ConEmu for all command line interactions from now on - **
 
 The tab should close itself when it's done. Once that happens you can delete the `setup.sh` file.
 
-**You should use ConEmu for all command line code throughout the course - if you use Git Bash or other command line interfaces you won't have everything you need installed.**
+**You should use ConEmu for all command line code throughout the course - if you use Git Bash or other command line interfaces you won't have everything you need installed. We suggest pinning ConEmu to the Task Bar - you'll be using it a lot**
