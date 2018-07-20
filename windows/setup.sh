@@ -127,6 +127,11 @@ rm composer-setup.php
 
 # ===============================================================
 
+# ssh key
+ssh-keygen -q -N "" -f "$HOME/.ssh/id_rsa"
+
+# ===============================================================
+
 # vagrant
 
 cd "$HOME"
@@ -135,18 +140,13 @@ sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
 printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:$(yarn global bin):$PATH\"" >> "$HOME/.bashrc"
 
+vagrant plugin install "${vagrant_plugins[@]}"
+
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
 do
     vagrant box add "$i" --provider virtualbox
 done
-
-vagrant plugin install "${vagrant_plugins[@]}"
-
-# ===============================================================
-
-# ssh key
-ssh-keygen -q -N "" -f "$HOME/.ssh/id_rsa"
 
 printf "\e[35m
 
