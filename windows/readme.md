@@ -46,7 +46,7 @@ After your computer has restarted:
 - Open ConEmu
 - When ConEmu first loads select {Bash::bash} as the startup task
 
-At this point you may get a message about no installed distributions, [follow the link and choose Ubuntu](https://aka.ms/wslstore). Once that is done click on "Launch" and follow the instructions below:
+**At this point you may get a message about no installed distributions, [follow the link and choose Ubuntu](https://aka.ms/wslstore).** Once that is done click on "Launch" and follow the instructions below:
 
 - When prompted, enter a username: this should be all lowercase with no spaces
 - When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security)
@@ -58,7 +58,7 @@ You should quit both the Ubuntu installer app and ConEmu at this point and then 
 
 Make sure you're using ConEmu for all command line interactions from now on - **do not** use the Ubuntu terminal.
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/14486e53fc6dea77107ba3b301f7d5cf9fe86e22/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/e3bde80857efc423e7148c592d63c129f67491fd/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
 
 ```
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.bashrc && exit
