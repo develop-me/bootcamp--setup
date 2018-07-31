@@ -49,7 +49,7 @@ After your computer has restarted:
 **At this point you may get a message about no installed distributions, [follow the link and choose Ubuntu](https://aka.ms/wslstore).** Once that is done click on "Launch" and follow the instructions below:
 
 - When prompted, enter a username: this should be all lowercase with no spaces
-- When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security)
+- When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security) - AND REMEMBER IT, you'll need this later
 
 You should quit both the Ubuntu installer app and ConEmu at this point and then start ConEmu again.
 
