@@ -24,6 +24,8 @@ cli=(
     ruby
     yarn
     watchman
+    gulp
+    gulp-cli
     php
     homebrew/php/composer
 )
