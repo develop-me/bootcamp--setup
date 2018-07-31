@@ -24,8 +24,6 @@ cli=(
     ruby
     yarn
     watchman
-    gulp
-    gulp-cli
     php
     homebrew/php/composer
 )
@@ -150,6 +148,19 @@ done
 
 # install gems
 /usr/local/bin/gem install "${gems[@]}"
+
+printf "\e[34m
+
+ Next we're going to install gulp
+ \e[39m
+"
+
+sleep 2
+
+# install gulp and gulp-cli (no homebrew cask)
+
+npm install gulp-cli -g
+npm install gulp -D
 
 printf "\e[34m
 
