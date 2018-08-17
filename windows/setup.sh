@@ -105,6 +105,8 @@ sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
 sudo apt-get install -y yarn
 
+sudo npm install gulp-cli -g
+
 sudo gem install sass
 
 # ===============================================================

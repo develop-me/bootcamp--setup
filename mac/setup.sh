@@ -151,6 +151,18 @@ done
 
 printf "\e[34m
 
+ Next we're going to install gulp
+ \e[39m
+"
+
+sleep 2
+
+# install gulp-cli globally with npm (no homebrew cask)
+
+npm install gulp-cli -g
+
+printf "\e[34m
+
  Next we're going to download some Vagrant boxes
  \e[39m
 "
