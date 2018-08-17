@@ -82,7 +82,6 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y yarn
 
 sudo npm install gulp-cli -g
-sudo npm install gulp -D
 
 sudo gem install sass
 

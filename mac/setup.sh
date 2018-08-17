@@ -157,10 +157,9 @@ printf "\e[34m
 
 sleep 2
 
-# install gulp and gulp-cli (no homebrew cask)
+# install gulp-cli globally with npm (no homebrew cask)
 
 npm install gulp-cli -g
-npm install gulp -D
 
 printf "\e[34m
 
