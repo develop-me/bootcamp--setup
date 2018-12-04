@@ -90,10 +90,6 @@ cd "$HOME"
 # add latest node repo
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 
-# add yarn repo
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
 # add PHP repo
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
@@ -103,7 +99,6 @@ sudo apt-get install -y git
 sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_version}-mbstring" "php${php_version}-dom"
 sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
-sudo apt-get install -y yarn
 
 sudo npm install gulp-cli -g
 
@@ -140,7 +135,7 @@ cd "$HOME"
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
-printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:$(yarn global bin):$PATH\"" >> "$HOME/.bashrc"
+printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:$PATH\"" >> "$HOME/.bashrc"
 
 vagrant plugin install "${vagrant_plugins[@]}"
 

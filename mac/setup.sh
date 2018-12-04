@@ -22,7 +22,6 @@ cli=(
     node
     libsass
     ruby
-    yarn
     watchman
     php
     homebrew/php/composer
@@ -200,7 +199,7 @@ if [ ! -f "$stpath/Installed Packages/Package Control.sublime-package" ]; then
 fi
 
 # setup bash profile
-echo "export PATH=/usr/local/bin:$HOME/.bin:$HOME/.composer/vendor/bin:$(yarn global bin):\$PATH" >> "$HOME/.bash_profile"
+echo "export PATH=/usr/local/bin:$HOME/.bin:$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bash_profile"
 
 # show hidden files and file extensions in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
