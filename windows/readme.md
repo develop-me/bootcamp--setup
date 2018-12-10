@@ -38,20 +38,15 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 - Type "developers" into the search bar, then click on "For developers settings"
 - In the window that appears select "Developer Mode", then click on "Yes" when prompted
 - Type "windows features" into the search bar, then click on "Turn Windows features on or off"
-- In the window that appears tick the box named "Windows Subsystem for Linux (Beta)", then click on "OK"
+- In the window that appears tick the box named "Windows Subsystem for Linux", then click on "OK"
 - Restart your computer
 
-After your computer has restarted:
-
-- Open ConEmu
-- When ConEmu first loads select {Bash::bash} as the startup task
-
-**At this point you may get a message about no installed distributions, [follow the link and choose Ubuntu](https://aka.ms/wslstore).** Once that is done click on "Launch" and follow the instructions below:
+After your computer has restarted, [follow this link to the Windows Store and choose Ubuntu](https://aka.ms/wslstore). Once that is done click on "Launch" and follow the instructions below:
 
 - When prompted, enter a username: this should be all lowercase with no spaces
 - When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security) - AND REMEMBER IT, you'll need this later
 
-You should quit both the Ubuntu installer app and ConEmu at this point and then start ConEmu again.
+You should quit both the Ubuntu installer app at this point and then start ConEmu. When ConEmu first loads select {Bash::bash} as the startup task. If {Bash:bash} is not an option then please talk to one of the instructors, otherwise everything else will fail.
 
 
 ## Installing command line tools
