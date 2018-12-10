@@ -24,7 +24,7 @@ cli=(
     ruby
     watchman
     php
-    homebrew/php/composer
+    composer
 )
 
 gems=(
@@ -42,10 +42,8 @@ vagrant_plugins=(
 )
 
 sublime_plugins='[
-    "Laravel Blade Highlighter",
     "Sass",
     "Babel",
-    "PHP-Twig",
     "SideBarEnhancements"
 ]'
 
