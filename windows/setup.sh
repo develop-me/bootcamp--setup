@@ -135,7 +135,7 @@ cd "$HOME"
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
-printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:$PATH\"" >> "$HOME/.bashrc"
+printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"\$HOME/bin:\$HOME/.composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:\$PATH\"" >> "$HOME/.bashrc"
 
 vagrant plugin install "${vagrant_plugins[@]}"
 
