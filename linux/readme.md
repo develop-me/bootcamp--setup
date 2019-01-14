@@ -1,4 +1,4 @@
-# Setting up Ubuntu 
+# Setting up Ubuntu
 
 **Make sure you're running the latest version of Ubuntu. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work. You should *always* keep your operating system and software up to date.**
 
@@ -20,7 +20,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 
 ## Installing command line tools
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/436027f9d74e7f22511ac616eb715667cc9563f7/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/6ac182adf363621d726d4cae0dfa479eafabac8e/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
 
 ```
 bash ~/Downloads/setup.sh && source ~/.bashrc && exit
