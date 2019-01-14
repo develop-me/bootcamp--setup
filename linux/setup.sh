@@ -2,7 +2,7 @@
 
 # ===============================================================
 
-vagrant_version="2.1.2"
+vagrant_version="2.2.3"
 php_version="7.2"
 node_version="10.x"
 
@@ -21,11 +21,11 @@ vagrant_plugins=(
 clear
 
 printf "\e[35m
-  ____                 _             __  __           
- |  _ \  _____   _____| | ___  _ __ |  \/  | ___      
- | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| |\/| |/ _ \     
- | |_| |  __/\ V /  __/ | (_) | |_) | |  | |  __/     
- |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____ 
+  ____                 _             __  __
+ |  _ \  _____   _____| | ___  _ __ |  \/  | ___
+ | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| |\/| |/ _ \
+ | |_| |  __/\ V /  __/ | (_) | |_) | |  | |  __/
+ |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____
                               |_|              |_____|
 
  \e[32m
@@ -36,9 +36,9 @@ printf "\e[35m
  This will install the following command line tools:
 
  • Git: version control made simple(ish)
- • Node: JavaScript on the command line 
- • Sass: makes CSS betterer 
- • Composer: installs all the PHP things 
+ • Node: JavaScript on the command line
+ • Sass: makes CSS betterer
+ • Composer: installs all the PHP things
 
  —————————————————————————————————————————————————————
 
@@ -61,7 +61,7 @@ mkdir "$HOME/bin"
 sudo apt-get update -y
 sudo apt-get install -y curl python-software-properties
 
-cd "$HOME" 
+cd "$HOME"
 
 # add latest node repo
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
@@ -71,19 +71,17 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 
 # install various things - separate to avoid one error stopping everything
-sudo apt-get install -y git 
+sudo apt-get install -y git
 sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_version}-mbstring" "php${php_version}-dom"
 sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
 
-sudo npm install gulp-cli -g
-
-sudo gem install sass
+sudo npm install gulp-cli sass -g
 
 # ===============================================================
 
 # composer
-cd "$HOME" 
+cd "$HOME"
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ACTUAL_SIGNATURE=$(php -r "echo hash_file('SHA384', 'composer-setup.php');")

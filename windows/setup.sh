@@ -2,7 +2,7 @@
 
 # ===============================================================
 
-vagrant_version="2.1.2"
+vagrant_version="2.2.3"
 php_version="7.2"
 node_version="10.x"
 
@@ -20,11 +20,11 @@ vagrant_plugins=(
 clear
 
 printf "\e[35m
-  ____                 _             __  __           
- |  _ \  _____   _____| | ___  _ __ |  \/  | ___      
- | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| |\/| |/ _ \     
- | |_| |  __/\ V /  __/ | (_) | |_) | |  | |  __/     
- |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____ 
+  ____                 _             __  __
+ |  _ \  _____   _____| | ___  _ __ |  \/  | ___
+ | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| |\/| |/ _ \
+ | |_| |  __/\ V /  __/ | (_) | |_) | |  | |  __/
+ |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____
                               |_|              |_____|
 
  \e[32m
@@ -35,9 +35,9 @@ printf "\e[35m
  This will install the following command line tools:
 
  • Git: version control made simple(ish)
- • Node: JavaScript on the command line 
- • Sass: makes CSS betterer 
- • Composer: installs all the PHP things 
+ • Node: JavaScript on the command line
+ • Sass: makes CSS betterer
+ • Composer: installs all the PHP things
 
  —————————————————————————————————————————————————————
 
@@ -56,7 +56,7 @@ if [ "$USER" == "root" ]; then
 
  You'll need to create a new user and then run the
  setup script again
- 
+
  Pick a username (lowercase, no spaces): \e[39m"
     read -r username
 
@@ -69,7 +69,7 @@ if [ "$USER" == "root" ]; then
     # set password
     passwd "$username"
 
-    su -l "$username" 
+    su -l "$username"
 
     exit 0
 fi
@@ -85,7 +85,7 @@ mkdir "$HOME/bin"
 sudo apt-get update -y
 sudo apt-get install -y python-software-properties
 
-cd "$HOME" 
+cd "$HOME"
 
 # add latest node repo
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
@@ -100,14 +100,12 @@ sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_ve
 sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
 
-sudo npm install gulp-cli -g
-
-sudo gem install sass
+sudo npm install gulp-cli sass -g
 
 # ===============================================================
 
 # composer
-cd "$HOME" 
+cd "$HOME"
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ACTUAL_SIGNATURE=$(php -r "echo hash_file('SHA384', 'composer-setup.php');")

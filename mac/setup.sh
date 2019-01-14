@@ -22,14 +22,11 @@ cli=(
     git
     node
     libsass
+    sass/sass/sass
     ruby
     watchman
     php
     composer
-)
-
-gems=(
-    sass
 )
 
 vagrant_boxes=(
@@ -69,7 +66,7 @@ printf "\e[35m
 
  • Chrome: a web developer's best friend
  • Chrome Canary: a web developer's unstable friend
- • Firefox: another close friend 
+ • Firefox: another close friend
  • Slack: communication is important
  • Sublime Text 3: text editor of choice
  • FileZilla: old-skool file transfer
@@ -143,9 +140,6 @@ for i in "${cli[@]}"
 do
     brew install "$i"
 done
-
-# install gems
-/usr/local/bin/gem install "${gems[@]}"
 
 printf "\e[34m
 
