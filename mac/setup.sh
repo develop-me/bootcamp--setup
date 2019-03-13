@@ -6,15 +6,15 @@
 # descriptions below
 
 apps=(
-    caskroom/cask/google-chrome
-    caskroom/versions/google-chrome-canary
-    caskroom/cask/slack
-    caskroom/cask/sublime-text
-    caskroom/cask/filezilla
-    caskroom/cask/firefox
-    caskroom/cask/sequel-pro
-    caskroom/cask/vagrant
-    caskroom/cask/virtualbox
+    homebrew/cask-versions/google-chrome-canary
+    google-chrome
+    slack
+    sublime-text
+    filezilla
+    firefox
+    sequel-pro
+    vagrant
+    virtualbox
 )
 
 cli=(
@@ -110,6 +110,21 @@ printf "\e[34m
 # homebrew install script
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# check that permissions on the homebrew directory are ok
+# can be broken if multiple users on same mac
+if [ -w "$(brew --prefix)/bin" ];
+    then : ;
+    else
+        printf "\e[31m
+
+ Sorry, the permissions on /usr/local are all wonky
+ Please seek help from an instructor
+ \e[39m
+"
+
+        exit;
+fi
+
 
 printf "\e[34m
 
@@ -122,7 +137,7 @@ sleep 2
 # install apps
 for i in "${apps[@]}"
 do
-    brew install "$i"
+    brew cask install "$i"
 done
 
 
