@@ -6,8 +6,8 @@ If you're running a different distribution of Linux, let us know and we'll panic
 
 ## Download and install
 
-- [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html)
 - [Firefox](https://www.mozilla.org/firefox)
+- [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html): for using ChromeCast
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [Krita](https://krita.org/en/) for PSD editing
 - [Sublime 3](https://www.sublimetext.com/3)

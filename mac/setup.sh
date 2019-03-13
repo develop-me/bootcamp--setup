@@ -6,7 +6,6 @@
 # descriptions below
 
 apps=(
-    homebrew/cask-versions/google-chrome-canary
     google-chrome
     slack
     sublime-text
