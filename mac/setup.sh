@@ -9,7 +9,7 @@ apps=(
     google-chrome
     slack
     sublime-text
-    filezilla
+    cyberduck
     firefox
     sequel-pro
     vagrant
