@@ -8,12 +8,12 @@
 apps=(
     google-chrome
     slack
-    sublime-text
     cyberduck
     firefox
     sequel-pro
     vagrant
     virtualbox
+    visual-studio-code
 )
 
 cli=(
@@ -37,12 +37,6 @@ vagrant_plugins=(
     vagrant-vbguest
     vagrant-hostsupdater
 )
-
-sublime_plugins='[
-    "Sass",
-    "Babel",
-    "SideBarEnhancements"
-]'
 
 
 # ===================================================
@@ -182,28 +176,6 @@ do
 done
 
 vagrant plugin install "${vagrant_plugins[@]}"
-
-printf "\e[34m
-
- Finally, we're going to setup Sublime Text
- \e[39m
-"
-
-sleep 2
-
-# setup Sublime Text command line
-mkdir -p "$HOME/.bin"
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/.bin/subl" ~/.bin/subl
-
-# setup Sublime Text plugins
-stpath="$HOME/Library/Application Support/Sublime Text 3"
-
-if [ ! -f "$stpath/Installed Packages/Package Control.sublime-package" ]; then
-    mkdir -p "$stpath/Installed Packages"
-    mkdir -p "$stpath/Packages/User"
-    wget https://packagecontrol.io/Package%20Control.sublime-package -P "$stpath/Installed Packages"
-    echo "{\"installed_packages\": ${sublime_plugins}}" > "$stpath/Packages/User/Package Control.sublime-settings"
-fi
 
 # setup bash profile
 echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bash_profile"

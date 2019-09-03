@@ -16,7 +16,7 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 - [Firefox](https://www.mozilla.org/firefox)
 - [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html): for using ChromeCast
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
-- [Sublime 3](https://www.sublimetext.com/3)
+- [VS Code](https://code.visualstudio.com)
 - [Cyberduck](https://cyberduck.io/download/)
 - [Vagrant](https://releases.hashicorp.com/vagrant/2.2.3/vagrant_2.2.3_x86_64.msi)
 - [Virtualbox](https://www.virtualbox.org/)
