@@ -61,8 +61,8 @@ printf "\e[35m
  • Chrome Canary: a web developer's unstable friend
  • Firefox: another close friend
  • Slack: communication is important
- • Sublime Text 3: text editor of choice
- • FileZilla: old-skool file transfer
+ • VS Code: text editor of choice
+ • CyberDuck: old-skool file transfer
  • Vagrant: for running development environments
  • Virtualbox: helps Vagrant out
  • iTerm2: a nicer terminal

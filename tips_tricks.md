@@ -17,16 +17,11 @@ For each with give commands as `Mac` / `Windows`.
 
 - **New tab:** `cmd + t` / `Ctrl + t`
 
-## Coding in Sublime
+## Coding in VS Code
 
-To get started with Sublime you should open the folder containing the current project/files that you're working on:
-
-![Opening a folder in Sublime Text](https://github.com/develop-me/setup/raw/img/open.gif)
+To get started with VS Code you should open **the entire directory** containing the current project/files that you're working on.
 
 - **Open file:** `cmd + p` / `Ctrl + p` and start typing filename
-![Ctrl-p in Sublime Text](https://github.com/develop-me/setup/raw/img/ctrl-p.gif)
-
 - **Copy whole line:** with nothing selected `cmd + c` / `Ctrl + c` copies entire line the cursor is on
-- **Move whole line up:** `cmd + ctrl + ↑` / `Ctrl + ⇧ + ↑` (Ctrl + shift + cursor up)
-- **Move whole line down:** `cmd + ctrl + ↓` / `Ctrl + ⇧ + ↓` (Ctrl + shift + cursor down)
-![Line Up/Down in Sublime Text](https://github.com/develop-me/setup/raw/img/up-down.gif)
+- **Move whole line up:** `Alt + ↑`
+- **Move whole line down:** `Alt + ↓`
