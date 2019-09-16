@@ -12,10 +12,6 @@ bash ~/Downloads/setup.sh
 
 Once the setup is complete you can delete the file. **You should also go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.**
 
-## Download and install
-
-- [XCode](https://itunes.apple.com/gb/app/xcode/id497799835?mt=12) (~5GB, so it will take a while)
-
 ## Photoshop
 
 [Photoshop](http://www.adobe.com/uk/products/photoshop.html) is available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription. The first 7 days are free, so if you wait until week 1 to install Photoshop you can get away without a subscription.
