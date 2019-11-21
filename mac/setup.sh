@@ -133,6 +133,8 @@ do
     brew cask install "$i"
 done
 
+# restart VirtualBox as can service cause issues
+sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
 
 printf "\e[34m
 
