@@ -177,8 +177,11 @@ done
 
 vagrant plugin install "${vagrant_plugins[@]}"
 
-# setup bash profile
+# setup bash profile / pre-Catalina
 echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bash_profile"
+
+# setup Z Shell resource file / post-Catalina
+echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshrc"
 
 # show hidden files and file extensions in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
