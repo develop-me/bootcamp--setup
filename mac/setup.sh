@@ -57,9 +57,8 @@ printf "\e[35m
 
  This will install the following apps:
 
- • Chrome: a web developer's best friend
- • Chrome Canary: a web developer's unstable friend
- • Firefox: another close friend
+ • Firefox: a web developer's best friend
+ • Chrome: for ChromeCast
  • Slack: communication is important
  • VS Code: text editor of choice
  • CyberDuck: old-skool file transfer

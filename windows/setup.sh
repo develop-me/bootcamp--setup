@@ -2,8 +2,8 @@
 
 # ===============================================================
 
-vagrant_version="2.2.5"
-php_version="7.3"
+vagrant_version="2.2.6"
+php_version="7.4"
 node_version="12.x"
 
 vagrant_boxes=(

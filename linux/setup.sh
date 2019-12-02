@@ -2,9 +2,9 @@
 
 # ===============================================================
 
-vagrant_version="2.2.3"
-php_version="7.2"
-node_version="10.x"
+vagrant_version="2.2.6"
+php_version="7.4"
+node_version="12.x"
 
 vagrant_boxes=(
     scotch/box
