@@ -52,7 +52,7 @@ You should quit both the Ubuntu installer app at this point and then start ConEm
 
 Make sure you're using ConEmu for all command line interactions from now on - **do not** use the Ubuntu terminal.
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/c34c0cf5c70efa6bec4189e23662cde357ec5145/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
+[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/fe5f184c71aae72d1d06182bdf1d2aa12e346168/windows/setup.sh) and save it to your Downloads directory (e.g. `C:\Users\yourusername\Downloads`). Next, in ConEmu, run the following (replace `yourusername` with your Windows username):
 
 ```
 /mnt/c/Users/yourusername/Downloads/setup.sh && source ~/.bashrc && exit
