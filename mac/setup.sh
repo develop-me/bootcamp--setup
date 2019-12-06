@@ -133,7 +133,7 @@ do
     brew cask install "$i"
 done
 
-# restart VirtualBox as can service cause issues
+# restart VirtualBox as service can cause issues
 sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
 
 printf "\e[34m
@@ -183,7 +183,7 @@ vagrant plugin install "${vagrant_plugins[@]}"
 echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bash_profile"
 
 # setup Z Shell resource file / post-Catalina
-echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshrc"
+echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshenv"
 
 # show hidden files and file extensions in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
