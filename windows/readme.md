@@ -56,7 +56,7 @@ After your computer has restarted, [follow this link to the Windows Store and ch
 Make sure you're using ConEmu for all command line interactions from now on - **do not** use the Ubuntu terminal.
 
 - Load ConEmu
-- Run `curl https://raw.githubusercontent.com/develop-me/setup/master/windows/setup.sh > setup.sh`
+- Run `curl https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/windows/setup.sh > setup.sh`
 - Run `bash setup.sh && rm setup.sh && exit`
 
 The tab should close itself when it's done.

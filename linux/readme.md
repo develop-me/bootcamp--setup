@@ -21,7 +21,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 ## Installing command line tools
 
 - Load Terminal
-- Run `curl https://raw.githubusercontent.com/develop-me/setup/master/linux/setup.sh > setup.sh`
+- Run `curl https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/linux/setup.sh > setup.sh`
 - Run `bash setup.sh && rm setup.sh && exit`
 
 The tab should close itself when it's done.
