@@ -60,7 +60,6 @@ mkdir "$HOME/bin"
 
 # allow non standard repos
 sudo apt-get update -y
-sudo apt-get install -y curl python-software-properties
 
 cd "$HOME"
 
