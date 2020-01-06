@@ -178,6 +178,9 @@ done
 
 vagrant plugin install "${vagrant_plugins[@]}"
 
+# restart VirtualBox as service can cause issues
+ sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
+
 # zsh
 [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
