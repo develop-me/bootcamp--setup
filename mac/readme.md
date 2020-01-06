@@ -4,11 +4,9 @@
 
 ## Automatic Install
 
-[Click here to Download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/fe5f184c71aae72d1d06182bdf1d2aa12e346168/mac/setup.sh) and save it to your Downloads directory (e.g. `/Users/yourname/Downloads`). Next open the Terminal app and run the following:
-
-```
-bash ~/Downloads/setup.sh
-```
+- Load Terminal
+- Run `curl https://raw.githubusercontent.com/develop-me/setup/master/mac/setup.sh > setup.sh`
+- Run `bash setup.sh && rm setup.sh && exit`
 
 Once the setup is complete you can delete the file. **You should also go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.**
 

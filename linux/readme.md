@@ -20,10 +20,8 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 
 ## Installing command line tools
 
-[Click here to download the `setup.sh` file](https://cdn.rawgit.com/develop-me/setup/fe5f184c71aae72d1d06182bdf1d2aa12e346168/linux/setup.sh) and save it to your Downloads directory (e.g. `~/Downloads`). Next, in Terminal, run the following:
+- Load Terminal
+- Run `curl https://raw.githubusercontent.com/develop-me/setup/master/linux/setup.sh > setup.sh`
+- Run `bash setup.sh && rm setup.sh && exit`
 
-```
-bash ~/Downloads/setup.sh && source ~/.bashrc && exit
-```
-
-The tab should close itself when it's done. Once that happens you can delete the `setup.sh` file.
+The tab should close itself when it's done.
