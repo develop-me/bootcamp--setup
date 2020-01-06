@@ -5,8 +5,17 @@
 ## Automatic Install
 
 - Load Terminal
-- Run `curl https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/mac/setup.sh > setup.sh`
-- Run `bash setup.sh && rm setup.sh && exit`
+- Run:
+
+    ```bash
+    curl https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/mac/setup.sh > setup.sh
+    ```
+
+- Run:
+
+    ```bash
+    bash setup.sh && rm setup.sh && exit
+    ```
 
 Once the setup is complete you can delete the file. **You should also go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.**
 
