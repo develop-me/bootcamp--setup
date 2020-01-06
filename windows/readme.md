@@ -44,8 +44,11 @@ After your computer has restarted, [follow this link to the Windows Store and ch
 
 - When prompted, enter a username: this should be all lowercase with no spaces
 - When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security) - AND REMEMBER IT, you'll need this later
+- Now type `exit`, this will close the Ubuntu app
+- Now start ConEmu
+- When ConEmu first loads select `{Bash::bash}` as the startup task (If `{Bash:bash}` is not an option then please talk to one of the instructors, otherwise everything else will fail)
 
-You should quit both the Ubuntu installer app at this point and then start ConEmu. When ConEmu first loads select {Bash::bash} as the startup task. If {Bash:bash} is not an option then please talk to one of the instructors, otherwise everything else will fail.
+    ![ConEmu Setup Screen](conemu.png)
 
 
 ## Installing command line tools
