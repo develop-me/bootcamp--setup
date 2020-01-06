@@ -1,4 +1,1 @@
-chore: updates package versions
-
-
-
+fixes composer global vendor location issue
