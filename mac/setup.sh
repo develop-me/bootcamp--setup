@@ -26,6 +26,7 @@ cli=(
     watchman
     php
     composer
+    zsh
 )
 
 vagrant_boxes=(
@@ -73,6 +74,7 @@ printf "\e[35m
  • Node: JavaScript on the command line
  • Sass: makes CSS betterer
  • Composer: installs all the PHP things
+ • ZSH: a nicer command-line experience
 
  —————————————————————————————————————————————————————
 
@@ -176,8 +178,10 @@ done
 
 vagrant plugin install "${vagrant_plugins[@]}"
 
-# setup bash profile
-echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.bash_profile"
+# zsh
+[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshenv"
 
 # show hidden files and file extensions in Finder
 defaults write com.apple.finder AppleShowAllFiles YES

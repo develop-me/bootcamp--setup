@@ -39,6 +39,7 @@ printf "\e[35m
  • Node: JavaScript on the command line
  • Sass: makes CSS betterer
  • Composer: installs all the PHP things
+ • ZSH: a nicer command-line experience
 
  —————————————————————————————————————————————————————
 
@@ -104,7 +105,6 @@ cd "$HOME"
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
-printf "\n\nexport PATH=\"$HOME/bin:$HOME/.composer/vendor/bin:$PATH\"" >> "$HOME/.bashrc"
 
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
@@ -113,6 +113,15 @@ do
 done
 
 vagrant plugin install "${vagrant_plugins[@]}"
+
+# ===============================================================
+
+# zsh
+sudo apt-get install -y zsh
+[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+printf "\n\nexport PATH=\"$HOME/bin:$HOME/.composer/vendor/bin:$PATH\"" >> "$HOME/.zshenv"
+
 
 # ===============================================================
 

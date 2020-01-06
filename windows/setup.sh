@@ -38,6 +38,7 @@ printf "\e[35m
  • Node: JavaScript on the command line
  • Sass: makes CSS betterer
  • Composer: installs all the PHP things
+ • ZSH: a nicer command-line experience
 
  —————————————————————————————————————————————————————
 
@@ -135,7 +136,7 @@ cd "$HOME"
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 
-printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"\nexport PATH=\"\$HOME/bin:\$HOME/.composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:\$PATH\"" >> "$HOME/.bashrc"
+printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.bashrc"
 
 vagrant plugin install "${vagrant_plugins[@]}"
 
@@ -145,7 +146,24 @@ do
     vagrant box add "$i" --provider virtualbox
 done
 
+# ===============================================================
+
+# zsh
+sudo apt-get install -y zsh
+[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+printf "\nexport PATH=\"\$HOME/bin:\$HOME/.composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:\$PATH\"" >> "$HOME/.zshenv"
+
+echo "
+if test -t 1; then
+exec zsh
+fi
+" >> "$HOME/.bashrc"
+
+# ===============================================================
+
 printf "\e[35m
+
 
  —————————————————————————————————————————————————————
 
