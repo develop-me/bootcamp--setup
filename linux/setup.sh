@@ -116,14 +116,15 @@ vagrant plugin install "${vagrant_plugins[@]}"
 # ===============================================================
 
 # zsh
+sudo apt-get install -y zsh
+[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
+
 printf "\e[34m
  Installing ZSH
  When it asks if you want to change the shell say yes ('Y')
  \e[39m
 "
 
-sudo apt-get install -y zsh
-[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 printf "\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:$PATH\"" >> "$HOME/.zshenv"
 
