@@ -29,7 +29,7 @@ printf "\e[35m
                               |_|              |_____|
 
  \e[32m
- Linux Setup Script v1.0
+ Linux Setup Script
 
  —————————————————————————————————————————————————————
 
@@ -56,12 +56,8 @@ printf "\e[34m
  \e[39m
 "
 
-mkdir "$HOME/bin"
-
 # allow non standard repos
 sudo apt-get update -y
-
-cd "$HOME"
 
 # add latest node repo
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
@@ -75,13 +71,15 @@ sudo apt-get install -y git
 sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_version}-mbstring" "php${php_version}-dom"
 sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
+sudo apt-get install -y zsh
 
 sudo npm install gulp-cli sass -g
 
 # ===============================================================
 
 # composer
-cd "$HOME"
+mkdir -m 775 "$HOME/bin"
+
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ACTUAL_SIGNATURE=$(php -r "echo hash_file('SHA384', 'composer-setup.php');")
@@ -95,45 +93,47 @@ else
 fi
 
 rm composer-setup.php
+chmod o-w -R "$HOME/.config"
 
 # ===============================================================
 
 # vagrant
-
-cd "$HOME"
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
+rm "vagrant_${vagrant_version}_x86_64.deb"
 
+# ===============================================================
+
+# zsh
+[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
+
+curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
+bash ohmyzsh.sh --unattended
+chsh -s "$(which zsh)"
+rm ohmyzsh.sh
+
+# add directories to PATH
+printf "\nexport PATH=\"\$HOME/bin:\$HOME/.config/composer/vendor/bin:\$PATH\"" >> "$HOME/.zshenv"
+
+# sets up oh-my-zsh plugins/theme
+sed -i 's/plugins=(git)/plugins=(git composer git-flow gulp homestead laravel node npm vagrant)/g' "$HOME/.zshrc"
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
+
+# ===============================================================
+
+# sort out guard/listen issue
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+# ===============================================================
+
+# do rest of stuff that takes ages
+vagrant plugin install "${vagrant_plugins[@]}"
 
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
 do
     vagrant box add "$i" --provider virtualbox
 done
-
-vagrant plugin install "${vagrant_plugins[@]}"
-
-# ===============================================================
-
-# zsh
-sudo apt-get install -y zsh
-[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
-
-printf "\e[34m
- Installing ZSH
- When it asks if you want to change the shell say yes ('Y')
- \e[39m
-"
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-printf "\nexport PATH=\"$HOME/bin:$HOME/.config/composer/vendor/bin:$PATH\"" >> "$HOME/.zshenv"
-
-
-# ===============================================================
-
-
-# sort out guard/listen issue
-echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 
 printf "\e[35m

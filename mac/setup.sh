@@ -52,7 +52,7 @@ printf "\e[35m
  |____/ \___| \_/ \___|_|\___/| .__/|_|  |_|\___|____
                               |_|              |_____|
  \e[32m
- Mac Setup Script v1.0
+ Mac Setup Script
 
  —————————————————————————————————————————————————————
 
@@ -179,12 +179,15 @@ done
 vagrant plugin install "${vagrant_plugins[@]}"
 
 # restart VirtualBox as service can cause issues
- sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
+sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
 
 # zsh
 [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshenv"
+
+sed -i 's/plugins=(git)/plugins=(git brew cask composer git-flow gulp homestead laravel node npm vagrant vscode)/g' "$HOME/.zshrc"
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
 
 # show hidden files and file extensions in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
