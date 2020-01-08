@@ -168,6 +168,9 @@ done
 
 # ===============================================================
 
+# remove setup script
+rm setup.sh
+
 printf "\e[35m
 
 
@@ -176,5 +179,3 @@ printf "\e[35m
  And we're done!
  \e[39m
 "
-
-exit

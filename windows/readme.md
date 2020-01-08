@@ -65,7 +65,7 @@ Make sure you're using ConEmu for all command line interactions from now on - **
 - Run:
 
     ```bash
-    bash setup.sh && rm setup.sh && exit
+    bash setup.sh && exit
     ```
 
 - Close ConEmu

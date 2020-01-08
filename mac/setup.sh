@@ -197,6 +197,9 @@ killall Finder
 # add shortcut to iCloud
 ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud"
 
+# remove setup script
+rm setup.sh
+
 printf "\e[35m
 
  And we're done!

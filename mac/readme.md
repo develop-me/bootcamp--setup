@@ -14,7 +14,7 @@
 - Run:
 
     ```bash
-    bash setup.sh && rm setup.sh && exit
+    bash setup.sh && exit
     ```
 
 - Close Terminal

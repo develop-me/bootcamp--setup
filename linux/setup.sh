@@ -135,6 +135,8 @@ do
     vagrant box add "$i" --provider virtualbox
 done
 
+# remove setup script
+rm setup.sh
 
 printf "\e[35m
 

@@ -30,7 +30,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 - Run:
 
     ```bash
-    bash setup.sh && rm setup.sh && exit
+    bash setup.sh && exit
     ```
 
 - Close Terminal
