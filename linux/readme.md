@@ -33,6 +33,6 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
     bash setup.sh && rm setup.sh && exit
     ```
 
-- Run: `exit`
+- Close Terminal
 
 The tab should close itself when it's done.

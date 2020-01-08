@@ -68,8 +68,7 @@ Make sure you're using ConEmu for all command line interactions from now on - **
     bash setup.sh && rm setup.sh && exit
     ```
 
-- Run: `exit`
+- Close ConEmu
 
-The tab should close itself when it's done.
 
 **You should use ConEmu for all command line code throughout the course - if you use Git Bash or other command line interfaces you won't have everything you need installed. We suggest pinning ConEmu to the Task Bar - you'll be using it a lot**
