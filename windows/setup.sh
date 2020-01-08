@@ -28,7 +28,7 @@ printf "\e[35m
                               |_|              |_____|
 
  \e[32m
- Windows Setup Script v1.0
+ Windows Setup Script
 
  —————————————————————————————————————————————————————
 
@@ -80,12 +80,8 @@ printf "\e[34m
  \e[39m
 "
 
-mkdir "$HOME/bin"
-
 # allow non standard repos
 sudo apt-get update -y
-
-cd "$HOME"
 
 # add latest node repo
 curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
@@ -99,13 +95,14 @@ sudo apt-get install -y git
 sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_version}-mbstring" "php${php_version}-dom"
 sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
+sudo apt-get install -y zsh
 
 sudo npm install gulp-cli sass -g
 
 # ===============================================================
 
 # composer
-cd "$HOME"
+mkdir -m 775 "$HOME/bin"
 sudo chown "$USER":"$USER" -R "$HOME/.config"
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
@@ -121,6 +118,7 @@ else
 fi
 
 rm composer-setup.php
+chmod o-w -R "$HOME/.config"
 
 # ===============================================================
 
@@ -130,13 +128,36 @@ ssh-keygen -q -N "" -f "$HOME/.ssh/id_rsa"
 # ===============================================================
 
 # vagrant
-
-cd "$HOME"
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
+rm "vagrant_${vagrant_version}_x86_64.deb"
 
-printf "\n\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.bashrc"
+# ===============================================================
 
+# zsh
+[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
+
+curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
+bash ohmyzsh.sh --unattended
+chsh -s "$(which zsh)"
+rm ohmyzsh.sh
+
+# make sure zsh loads instead of bash
+printf "\nif test -t 1; then\n  exec zsh\nfi" >> "$HOME/.bashrc"
+
+# add directories to PATH
+printf "\nexport PATH=\"\$HOME/bin:\$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:\$PATH\"" >> "$HOME/.zshenv"
+
+# sort out Vagrant WSL stuff
+printf "\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.zshenv"
+
+# sets up oh-my-zsh plugins/theme
+sed -i 's/plugins=(git)/plugins=(git composer git-flow gulp homestead laravel node npm vagrant)/g' "$HOME/.zshrc"
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
+
+# ===============================================================
+
+# do rest of vagrant stuff that takes ages
 vagrant plugin install "${vagrant_plugins[@]}"
 
 # add vagrant boxes
@@ -147,25 +168,8 @@ done
 
 # ===============================================================
 
-# zsh
-printf "\e[34m
- Installing ZSH
- When it asks if you want to change the shell say yes ('Y')
- \e[39m
-"
-
-sudo apt-get install -y zsh
-[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-printf "\nexport PATH=\"\$HOME/bin:\$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:\$PATH\"" >> "$HOME/.zshenv"
-
-echo "
-if test -t 1; then
-exec zsh
-fi
-" >> "$HOME/.bashrc"
-
-# ===============================================================
+# remove setup script
+rm setup.sh
 
 printf "\e[35m
 

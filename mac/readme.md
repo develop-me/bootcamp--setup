@@ -14,10 +14,11 @@
 - Run:
 
     ```bash
-    bash setup.sh && rm setup.sh && exit
+    bash setup.sh && exit
     ```
 
-Once the setup is complete you can delete the file. **You should also go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.**
+- Close Terminal
+- Go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.
 
 ## Photoshop
 
