@@ -15,7 +15,6 @@ apps=(
     firefox
     sequel-pro
     vagrant
-    virtualbox
     visual-studio-code
 )
 

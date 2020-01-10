@@ -18,8 +18,8 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [VS Code](https://code.visualstudio.com)
 - [Cyberduck](https://cyberduck.io/download/)
-- [Vagrant](https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.msi)
-- [Virtualbox](https://www.virtualbox.org/)
+- [Vagrant 2.2.6](https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.msi)
+- [Virtualbox 6.0.14](https://download.virtualbox.org/virtualbox/6.0.14/VirtualBox-6.0.14-133895-Win.exe)
 - [ConEmu](https://conemu.github.io) - download the "Installer" version
 
 ## Photoshop
