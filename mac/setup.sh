@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# stop on first error
+set -e
+
 # ===================================================
 
 # If you update this list, don't forget to update the
@@ -91,13 +94,18 @@ if ([ "$input" == "no" ] || [ "$input" == "n" ]); then
     exit 1
 fi
 
+# ===============================================================
+
+# homebrew
 printf "\e[34m
+
  Ok, let's go...
 
- Installing homebrew...
+ Stage 1: Installing Homebrew...
 
- This is a command line tool that installs everything
- else for us. It's really handy.
+ (This is a command line tool that installs everything
+ else for us. It's really handy.)
+
  \e[39m
 "
 
@@ -119,14 +127,15 @@ if [ -w "$(brew --prefix)/bin" ];
         exit;
 fi
 
+# ===============================================================
 
+# casks
 printf "\e[34m
 
- Next we'll install the apps...
+ Stage 2: Installing apps...
+
  \e[39m
 "
-
-sleep 2
 
 # install apps
 for i in "${apps[@]}"
@@ -134,15 +143,18 @@ do
     brew cask install "$i"
 done
 
+# restart VirtualBox as service can cause issues
+sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
 
+# ===============================================================
+
+# cli tools
 printf "\e[34m
 
- Now we'll install the command line apps
+ Stage 3: Installing command-line tools...
+
  \e[39m
 "
-
-sleep 2
-
 
 # install cli tools
 for i in "${cli[@]}"
@@ -150,44 +162,44 @@ do
     brew install "$i"
 done
 
+# ===============================================================
+
+# gulp
 printf "\e[34m
 
- Next we're going to install gulp
+ Stage 4: Installing gulp...
+
  \e[39m
 "
-
-sleep 2
 
 # install gulp-cli globally with npm (no homebrew cask)
-
 npm install gulp-cli -g
 
+# ===============================================================
+
+# zsh
 printf "\e[34m
 
- Next we're going to download some Vagrant boxes
+ Stage 5: Setting up ZSH...
+
  \e[39m
 "
 
-sleep 2
-
-# add vagrant boxes
-for i in "${vagrant_boxes[@]}"
-do
-    vagrant box add "$i" --provider virtualbox
-done
-
-vagrant plugin install "${vagrant_plugins[@]}"
-
-# restart VirtualBox as service can cause issues
-sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
-
-# zsh
 [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshenv"
 
 sed -i 's/plugins=(git)/plugins=(git brew cask composer git-flow gulp homestead laravel node npm vagrant vscode)/g' "$HOME/.zshrc"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
+
+# ===============================================================
+
+printf "\e[34m
+
+ Stage 6: Configuring Finder...
+
+ \e[39m
+"
 
 # show hidden files and file extensions in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
@@ -197,12 +209,39 @@ killall Finder
 # add shortcut to iCloud
 ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud"
 
+# ===============================================================
+
+# add check alias
+printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
+
+# ===============================================================
+
+# do rest of vagrant stuff that takes ages
+printf "\e[34m
+
+ Stage 7: Downloading Vagrant boxes
+ (This part can take a while and isn't essential)
+
+ \e[39m
+"
+
+vagrant plugin install "${vagrant_plugins[@]}"
+
+# add vagrant boxes
+for i in "${vagrant_boxes[@]}"
+do
+    vagrant box add "$i" --provider virtualbox
+done
+
+# ===============================================================
+
 # remove setup script
 rm setup.sh
+
+# ===============================================================
 
 printf "\e[35m
 
  And we're done!
- Aren't you glad you've got a Mac?
  \e[39m
 "
