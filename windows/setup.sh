@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# stop on first error
+set -e
+
 # ===============================================================
 
 vagrant_version="2.2.6"
@@ -76,7 +79,11 @@ if [ "$USER" == "root" ]; then
 fi
 
 printf "\e[34m
+
  Ok, let's go...
+
+ Stage 1: Setting up linux package manager...
+
  \e[39m
 "
 
@@ -90,6 +97,15 @@ curl -sL "https://deb.nodesource.com/setup_${node_version}" | sudo -E bash -
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
 
+
+printf "\e[35m
+
+ Stage 2: Installing binaries...
+ (This can take a while - downloading a lot of files!)
+
+ \e[39m
+"
+
 # separate just incase one install breaks the other
 sudo apt-get install -y git
 sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_version}-mbstring" "php${php_version}-dom"
@@ -102,6 +118,13 @@ sudo npm install gulp-cli sass -g
 # ===============================================================
 
 # composer
+printf "\e[35m
+
+ Stage 3: Setting up Composer...
+
+ \e[39m
+"
+
 mkdir -m 775 "$HOME/bin"
 sudo chown "$USER":"$USER" -R "$HOME/.config"
 
@@ -123,11 +146,25 @@ chmod o-w -R "$HOME/.config"
 # ===============================================================
 
 # ssh key
+printf "\e[35m
+
+ Stage 4: Creating SSH key...
+
+ \e[39m
+"
+
 ssh-keygen -q -N "" -f "$HOME/.ssh/id_rsa"
 
 # ===============================================================
 
 # vagrant
+printf "\e[35m
+
+ Stage 5: Installing Vagrant...
+
+ \e[39m
+"
+
 wget "https://releases.hashicorp.com/vagrant/${vagrant_version}/vagrant_${vagrant_version}_x86_64.deb"
 sudo dpkg -i "vagrant_${vagrant_version}_x86_64.deb"
 rm "vagrant_${vagrant_version}_x86_64.deb"
@@ -135,6 +172,13 @@ rm "vagrant_${vagrant_version}_x86_64.deb"
 # ===============================================================
 
 # zsh
+printf "\e[35m
+
+ Stage 6: Setting up ZSH...
+
+ \e[39m
+"
+
 [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 
 curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
@@ -157,7 +201,20 @@ sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
 
 # ===============================================================
 
+# add check alias
+printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
+
+# ===============================================================
+
 # do rest of vagrant stuff that takes ages
+printf "\e[35m
+
+ Stage 7: Downloading Vagrant boxes
+ (This part can take a while and isn't essential)
+
+ \e[39m
+"
+
 vagrant plugin install "${vagrant_plugins[@]}"
 
 # add vagrant boxes
@@ -171,8 +228,9 @@ done
 # remove setup script
 rm setup.sh
 
-printf "\e[35m
+# ===============================================================
 
+printf "\e[35m
 
  —————————————————————————————————————————————————————
 
