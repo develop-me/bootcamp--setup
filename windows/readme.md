@@ -28,7 +28,7 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 
 ## VS Code Settings
 
-Open VS Code then go to `File > Preferences > Settings`. Then click on the small icon of a piece of paper being turned around (top right of the window, left-most icon). Now copy in the [settings](vscode.json).
+Open VS Code then go to `File > Preferences > Settings`. Then click on the small icon of a piece of paper being turned around (top right of the window, left-most icon). Now copy in the [settings](../vscode.json).
 
 ## Set up a GitHub account
 
