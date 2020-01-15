@@ -210,6 +210,22 @@ ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud"
 
 # ===============================================================
 
+# sort out VS Code
+printf "\e[34m
+
+ Stage 7: Setting VS Code defaults
+
+ \e[39m
+"
+
+if [ ! -f "$HOME/Library/Application Support/Code/User/settings.json" ]; then
+    mkdir -p "$HOME/Library/Application Support/Code/User/"
+    curl "https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/vscode.json" > "$HOME/Library/Application Support/Code/User/settings.json"
+fi
+
+
+# ===============================================================
+
 # add check alias
 printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
 
@@ -218,7 +234,7 @@ printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
 # do rest of vagrant stuff that takes ages
 printf "\e[34m
 
- Stage 7: Downloading Vagrant boxes
+ Stage 8: Downloading Vagrant boxes
  (This part can take a while and isn't essential)
 
  \e[39m
