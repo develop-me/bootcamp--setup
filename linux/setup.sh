@@ -161,6 +161,21 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 
 # ===============================================================
 
+# sort out VS Code
+printf "\e[34m
+
+ Stage 6: Setting VS Code defaults
+
+ \e[39m
+"
+
+if [ ! -f "$HOME/.config/Code/User/settings.json" ]; then
+    mkdir -p "$HOME/.config/Code/User/"
+    curl "https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/vscode.json" > "$HOME/.config/Code/User/settings.json"
+fi
+
+# ===============================================================
+
 # add check alias
 printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
 
@@ -169,7 +184,7 @@ printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
 # do rest of stuff that takes ages
 printf "\e[35m
 
- Stage 6: Downloading Vagrant boxes
+ Stage 7: Downloading Vagrant boxes
  (This part can take a while and isn't essential)
 
  \e[39m

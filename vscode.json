@@ -1,0 +1,6 @@
+{
+    "editor.wordWrap": "on",
+    "html.mirrorCursorOnMatchingTag": false,
+    "javascript.suggestionActions.enabled": false,
+    "editor.showUnused": false
+}
