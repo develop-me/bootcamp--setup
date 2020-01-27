@@ -139,7 +139,9 @@ printf "\e[34m
 # install apps
 for i in "${apps[@]}"
 do
-    brew cask install "$i"
+    if ! brew cask ls "$i" > /dev/null; then
+        brew cask install "$i"
+    fi
 done
 
 # restart VirtualBox as service can cause issues
@@ -158,7 +160,9 @@ printf "\e[34m
 # install cli tools
 for i in "${cli[@]}"
 do
-    brew install "$i"
+    if ! brew ls "$i" > /dev/null; then
+        brew install "$i"
+    fi
 done
 
 # ===============================================================
