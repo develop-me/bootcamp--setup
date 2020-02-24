@@ -22,10 +22,6 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 - [Virtualbox 6.0.14](https://download.virtualbox.org/virtualbox/6.0.14/VirtualBox-6.0.14-133895-Win.exe)
 - [ConEmu](https://conemu.github.io) - download the "Installer" version
 
-## Photoshop
-
-[Photoshop](http://www.adobe.com/uk/products/photoshop.html) is available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription. The first 7 days are free, so if you wait until week 1 to install Photoshop you can get away without a subscription.
-
 ## VS Code Settings
 
 Open VS Code then go to `File > Preferences > Settings`. Then click on the small icon of a piece of paper being turned around (top right of the window, left-most icon). Now copy in the [settings](../vscode.json).
