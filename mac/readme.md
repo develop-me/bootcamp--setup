@@ -25,10 +25,6 @@
 
 - Close Terminal
 
-## Photoshop
-
-[Photoshop](http://www.adobe.com/uk/products/photoshop.html) is available as part of [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) subscription. The first 7 days are free, so if you wait until week 1 to install Photoshop you can get away without a subscription.
-
 ## Set up a GitHub account
 
 You can [sign up here](https://github.com/join) (the free plan is fine).
