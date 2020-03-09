@@ -5,7 +5,7 @@ set -e
 
 # ===============================================================
 
-vagrant_version="2.2.6"
+vagrant_version="2.2.7"
 php_version="7.4"
 node_version="12.x"
 
@@ -86,6 +86,7 @@ sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_ve
 sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
 sudo apt-get install -y zsh
+sudo apt-get install -y virtualbox
 
 sudo npm install gulp-cli sass -g
 

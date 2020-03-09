@@ -11,7 +11,6 @@ If you're running a different distribution of Linux, let us know and we'll panic
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [VS Code](https://code.visualstudio.com)
 - [FileZilla](https://filezilla-project.org/download.php?show_all=1)
-- [Virtualbox 6.0.14](https://download.virtualbox.org/virtualbox/6.0.14/virtualbox-6.0_6.0.14-133895~Ubuntu~bionic_amd64.deb)
 
 ## Set up a GitHub account
 

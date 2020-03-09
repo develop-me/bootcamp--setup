@@ -2,12 +2,6 @@
 
 **Make sure you're running the latest version of macOS. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work. You should *always* keep your operating system and software up to date.**
 
-## VirtualBox
-
-- Download & install [Virtualbox 6.0.14](https://download.virtualbox.org/virtualbox/6.0.14/VirtualBox-6.0.14-133895-OSX.dmg)
-- Go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.
-
-
 ## Automatic Install
 
 - Load Terminal
@@ -24,6 +18,12 @@
     ```
 
 - Close Terminal
+
+
+## VirtualBox
+
+- Go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.
+
 
 ## Set up a GitHub account
 
