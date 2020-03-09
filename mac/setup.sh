@@ -16,6 +16,7 @@ apps=(
     sequel-pro
     vagrant
     visual-studio-code
+    virtualbox
 )
 
 cli=(
