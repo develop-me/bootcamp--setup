@@ -141,7 +141,7 @@ printf "\e[34m
 for i in "${apps[@]}"
 do
     if ! brew cask ls "$i" 2> /dev/null; then
-        brew cask install "$i"
+        brew cask install --force "$i"
     fi
 done
 
