@@ -140,8 +140,8 @@ printf "\e[34m
 # install apps
 for i in "${apps[@]}"
 do
-    if ! brew cask ls "$i" > /dev/null; then
-        brew cask install "$i"
+    if ! brew cask ls "$i" 2> /dev/null; then
+        brew cask install --force "$i"
     fi
 done
 
@@ -161,7 +161,7 @@ printf "\e[34m
 # install cli tools
 for i in "${cli[@]}"
 do
-    if ! brew ls "$i" > /dev/null; then
+    if ! brew ls "$i" 2> /dev/null; then
         brew install "$i"
     fi
 done
