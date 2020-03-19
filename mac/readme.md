@@ -14,10 +14,14 @@
 - Run:
 
     ```bash
-    bash setup.sh && exit
+    bash setup.sh
     ```
 
+- You should see "And we're done!" at the end if everything has worked
+
 - Close Terminal
+
+- Re-open Terminal and type in `weallgood`. You should get a "We all good!" message in response.
 
 
 ## VirtualBox

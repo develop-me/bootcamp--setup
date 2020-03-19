@@ -65,10 +65,14 @@ Make sure you're using ConEmu for all command line interactions from now on - **
 - Run:
 
     ```bash
-    bash setup.sh && exit
+    bash setup.sh
     ```
 
+- You should see "And we're done!" at the end if everything has worked
+
 - Close ConEmu
+
+- Re-open ConEmu and type in `weallgood`. You should get a "We all good!" message in response.
 
 
 **You should use ConEmu for all command line code throughout the course - if you use Git Bash or other command line interfaces you won't have everything you need installed. We suggest pinning ConEmu to the Task Bar - you'll be using it a lot**

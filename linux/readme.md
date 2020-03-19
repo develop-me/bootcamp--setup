@@ -28,9 +28,11 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 - Run:
 
     ```bash
-    bash setup.sh && exit
+    bash setup.sh
     ```
+
+- You should see "And we're done!" at the end if everything has worked
 
 - Close Terminal
 
-The tab should close itself when it's done.
+- Re-open Terminal and type in `weallgood`. You should get a "We all good!" message in response.
