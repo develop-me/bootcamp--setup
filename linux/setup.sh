@@ -178,7 +178,7 @@ fi
 # ===============================================================
 
 # add check alias
-printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
+printf "\nalias weallgood=\"echo 'We all good! \\(^o^)/'\"" >> "$HOME/.zshrc"
 
 # ===============================================================
 
