@@ -202,7 +202,9 @@ printf "\nalias weallgood=\"echo 'We all good! \\(^o^)/'\"" >> "$HOME/.zshrc"
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
 do
-    vagrant box add "$i" --provider virtualbox
+    if ! vagrant box list | grep "$i" > /dev/null ; then
+        vagrant box add "$i" --provider virtualbox
+    fi
 done
 
 # remove setup script

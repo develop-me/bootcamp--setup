@@ -252,7 +252,6 @@ fi
 printf "\e[34m
 
  Stage 8: Downloading Vagrant boxes
- (This part can take a while and isn't essential)
 
  \e[39m
 "
@@ -269,7 +268,9 @@ printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
 do
-    vagrant box add "$i" --provider virtualbox
+    if ! vagrant box list | grep "$i" > /dev/null ; then
+        vagrant box add "$i" --provider virtualbox
+    fi
 done
 
 # ===============================================================
