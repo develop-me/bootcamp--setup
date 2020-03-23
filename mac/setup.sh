@@ -110,7 +110,7 @@ printf "\e[34m
 "
 
 # homebrew install script
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # check that permissions on the homebrew directory are ok
 # can be broken if multiple users on same mac
