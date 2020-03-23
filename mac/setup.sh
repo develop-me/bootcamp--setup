@@ -244,12 +244,6 @@ if [ ! -f "$HOME/Library/Application Support/Code/User/settings.json" ]; then
     curl "https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/vscode.json" > "$HOME/Library/Application Support/Code/User/settings.json"
 fi
 
-
-# ===============================================================
-
-# add check alias
-printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
-
 # ===============================================================
 
 # do rest of vagrant stuff that takes ages
@@ -265,6 +259,10 @@ for i in "${vagrant_plugins[@]}"
 do
     vagrant plugin install "$i"
 done
+
+# add check alias
+printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
+
 
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"

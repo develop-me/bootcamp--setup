@@ -201,11 +201,6 @@ sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
 
 # ===============================================================
 
-# add check alias
-printf "\nalias weallgood=\"echo 'We all good! \\(^o^)/'\"" >> "$HOME/.zshrc"
-
-# ===============================================================
-
 # do rest of vagrant stuff that takes ages
 printf "\e[35m
 
@@ -215,7 +210,13 @@ printf "\e[35m
  \e[39m
 "
 
-vagrant plugin install "${vagrant_plugins[@]}"
+for i in "${vagrant_plugins[@]}"
+do
+    vagrant plugin install "$i"
+done
+
+# add check alias
+printf "\nalias weallgood=\"echo 'We all good! \\(^o^)/'\"" >> "$HOME/.zshrc"
 
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
