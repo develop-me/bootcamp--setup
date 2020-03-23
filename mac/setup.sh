@@ -192,14 +192,19 @@ printf "\e[34m
 [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 
 # unattended oh-my-zsh install
-curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
-bash ohmyzsh.sh --unattended
+if [ ! -f "$HOME/.oh-my-zsh" ]; then
+    curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
+    bash ohmyzsh.sh --unattended
+    rm ohmyzsh.sh
+fi
+
+# change to brew zsh
+sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s "$(which zsh)"
-rm ohmyzsh.sh
 
 echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshenv"
 
-sed -i '.original' -e 's/plugins=(git)/plugins=(git brew cask composer git-flow gulp homestead laravel node npm vagrant vscode)/g' "$HOME/.zshrc"
+sed -i '.original' -e 's/plugins=(git)/plugins=(git brew composer git-flow gulp homestead laravel node npm vagrant vscode)/g' "$HOME/.zshrc"
 sed -i '.original' -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
 
 rm "$HOME/.zshrc.original"
@@ -253,7 +258,10 @@ printf "\e[34m
  \e[39m
 "
 
-vagrant plugin install "${vagrant_plugins[@]}"
+for i in "${vagrant_plugins[@]}"
+do
+    vagrant plugin install "$i"
+done
 
 # add vagrant boxes
 for i in "${vagrant_boxes[@]}"
