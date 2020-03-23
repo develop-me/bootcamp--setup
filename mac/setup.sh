@@ -42,6 +42,16 @@ vagrant_plugins=(
     vagrant-hostsupdater
 )
 
+brew_dirs=(
+    bin
+    etc
+    include
+    lib
+    opt
+    sbin
+    share
+    var
+)
 
 # ===================================================
 
@@ -109,23 +119,16 @@ printf "\e[34m
  \e[39m
 "
 
+# make sure current user has permissions on relevant directories
+for i in "${brew_dirs[@]}"
+do
+    if [ -d "$(brew --prefix)/${i}" ]; then
+        sudo chown -R "$USER":admin "$(brew --prefix)/${i}"
+    fi
+done
+
 # homebrew install script
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-# check that permissions on the homebrew directory are ok
-# can be broken if multiple users on same mac
-if [ -w "$(brew --prefix)/bin" ];
-    then : ;
-    else
-        printf "\e[31m
-
- Sorry, the permissions on /usr/local are all wonky
- Please seek help from an instructor
- \e[39m
-"
-
-        exit;
-fi
 
 # ===============================================================
 
