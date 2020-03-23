@@ -195,11 +195,13 @@ printf "\e[34m
 [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 
 # unattended oh-my-zsh install
-if [ ! -f "$HOME/.oh-my-zsh" ]; then
-    curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
-    bash ohmyzsh.sh --unattended
-    rm ohmyzsh.sh
+if [ -f "$HOME/.oh-my-zsh" ]; then
+    rm -rf "$HOME/.oh-my-zsh"
 fi
+
+curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
+bash ohmyzsh.sh --unattended
+rm ohmyzsh.sh
 
 # change to brew zsh
 sudo sh -c "echo $(which zsh) >> /etc/shells"
