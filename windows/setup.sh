@@ -181,6 +181,11 @@ printf "\e[35m
 
 [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.old" # backup old zsh file if it exists
 
+# unattended oh-my-zsh install
+if [ -f "$HOME/.oh-my-zsh" ]; then
+    rm -rf "$HOME/.oh-my-zsh"
+fi
+
 curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >> ohmyzsh.sh
 bash ohmyzsh.sh --unattended
 chsh -s "$(which zsh)"
