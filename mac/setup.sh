@@ -119,6 +119,9 @@ printf "\e[34m
  \e[39m
 "
 
+# homebrew install script
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 # make sure current user has permissions on relevant directories
 for i in "${brew_dirs[@]}"
 do
@@ -127,8 +130,6 @@ do
     fi
 done
 
-# homebrew install script
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # ===============================================================
 
