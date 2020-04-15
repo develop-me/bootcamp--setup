@@ -1,6 +1,7 @@
 {
+    "editor.showUnused": false,
     "editor.wordWrap": "on",
     "html.mirrorCursorOnMatchingTag": false,
     "javascript.suggestionActions.enabled": false,
-    "editor.showUnused": false
+    "zenMode.hideLineNumbers": false
 }
