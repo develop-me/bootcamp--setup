@@ -170,6 +170,9 @@ do
     fi
 done
 
+# make git log more usable
+git config --global --replace-all core.pager "less -iXFR"
+
 # ===============================================================
 
 # gulp
