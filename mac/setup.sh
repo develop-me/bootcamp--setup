@@ -16,7 +16,6 @@ apps=(
     sequel-pro
     vagrant
     visual-studio-code
-    virtualbox
 )
 
 cli=(
@@ -24,12 +23,16 @@ cli=(
     git
     node
     libsass
-    sass/sass/sass
     ruby
     watchman
     php
     composer
     zsh
+)
+
+npm=(
+    grunt-cli
+    sass
 )
 
 vagrant_boxes=(
@@ -111,24 +114,25 @@ printf "\e[34m
 
  Ok, let's go...
 
- Stage 1: Installing Homebrew...
-
- (This is a command line tool that installs everything
- else for us. It's really handy.)
-
  \e[39m
 "
 
-# homebrew install script
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+if which brew &> /dev/null; then
+    printf "\e[34m Stage 1: Updating Homebrew...  \e[39m"
+    brew update
+else
+    printf "\e[34m Stage 1:  Installing Homebrew...  \e[39m"
+    # homebrew install script
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# make sure current user has permissions on relevant directories
-for i in "${brew_dirs[@]}"
-do
-    if [ -d "$(brew --prefix)/${i}" ]; then
-        sudo chown -R "$USER":admin "$(brew --prefix)/${i}"
-    fi
-done
+    # make sure current user has permissions on relevant directories
+    for i in "${brew_dirs[@]}"
+    do
+        if [ -d "$(brew --prefix)/${i}" ]; then
+            sudo chown -R "$USER":admin "$(brew --prefix)/${i}"
+        fi
+    done
+fi
 
 
 # ===============================================================
@@ -144,13 +148,11 @@ printf "\e[34m
 # install apps
 for i in "${apps[@]}"
 do
-    if ! brew cask ls "$i" 2> /dev/null; then
+    if ! brew cask ls "$i" &> /dev/null; then
         brew cask install --force "$i"
     fi
 done
 
-# restart VirtualBox as service can cause issues
-sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
 
 # ===============================================================
 
@@ -165,7 +167,7 @@ printf "\e[34m
 # install cli tools
 for i in "${cli[@]}"
 do
-    if ! brew ls "$i" 2> /dev/null; then
+    if ! brew ls "$i" &> /dev/null; then
         brew install "$i"
     fi
 done
@@ -175,16 +177,18 @@ git config --global --replace-all core.pager "less -iXFR"
 
 # ===============================================================
 
-# gulp
 printf "\e[34m
 
- Stage 4: Installing gulp...
+ Stage 4: Installing NPM packages...
 
  \e[39m
 "
 
-# install gulp-cli globally with npm (no homebrew cask)
-npm install gulp-cli -g
+# install npm packages
+for i in "${npm[@]}"
+do
+    npm install -g "$i"
+done
 
 # ===============================================================
 
