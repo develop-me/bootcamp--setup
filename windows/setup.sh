@@ -115,6 +115,9 @@ sudo apt-get install -y zsh
 
 sudo npm install gulp-cli sass -g
 
+# make git log more usable
+git config --global --replace-all core.pager "less -iXFR"
+
 # ===============================================================
 
 # composer

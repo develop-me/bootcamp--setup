@@ -2,6 +2,13 @@
 
 **Make sure you're running the latest version of macOS. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work. You should *always* keep your operating system and software up to date.**
 
+
+## VirtualBox
+
+- Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (Click on "OS X Hosts")
+- Go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.
+
+
 ## Automatic Install
 
 - Load Terminal
@@ -22,11 +29,6 @@
 - Close Terminal
 
 - Re-open Terminal and type in `weallgood`. You should get a "We all good!" message in response.
-
-
-## VirtualBox
-
-- Go into "Security & Privacy" in System Preferences and make sure you allow the VirtualBox kernel extension.
 
 
 ## Set up a GitHub account
