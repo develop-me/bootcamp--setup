@@ -211,7 +211,10 @@ rm ohmyzsh.sh
 sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s "$(which zsh)"
 
-echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:\$PATH" >> "$HOME/.zshenv"
+# find path for brew installed gems
+GEM_PATH=$(/usr/local/opt/ruby/bin/gem env GEM_PATH)
+
+echo "export PATH=/usr/local/bin:\$HOME/.bin:\$HOME/.composer/vendor/bin:/usr/local/opt/ruby/bin:$GEM_PATH:\$PATH" >> "$HOME/.zshenv"
 
 sed -i '.original' -e 's/plugins=(git)/plugins=(git brew composer git-flow gulp homestead laravel node npm vagrant vscode)/g' "$HOME/.zshrc"
 sed -i '.original' -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
