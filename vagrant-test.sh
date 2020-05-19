@@ -7,12 +7,14 @@ test_files=(
     "$TEST_DIR/laravel/app/Http/Controllers/Wombat.php"
 )
 
+mkdir "$TEST_DIR"
+
 # Scotch Box
 cd "$TEST_DIR" || exit 1
 git clone https://github.com/scotch-io/scotch-box
 cd "$TEST_DIR/scotch-box" || exit 1
 vagrant up
-vagrant ssh -c "cd /var/www && touch whisky.test"
+vagrant ssh -c "cd /var/www && echo '<?php echo \"Whisky\";' | php > whisky.test"
 
 # Homestead
 cd "$TEST_DIR" || exit 1
@@ -23,7 +25,7 @@ cd "$TEST_DIR/laravel" || exit 1
 composer require laravel/homestead
 vendor/bin/homestead make
 vagrant up
-vagrant ssh -c "cd code && artisan make:controller Wombat"
+vagrant ssh -c "cd code && php artisan make:controller Wombat"
 
 # Test
 for i in "${test_files[@]}"
