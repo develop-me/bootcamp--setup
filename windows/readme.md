@@ -18,7 +18,7 @@ You can set these by opening Windows Explorer and then click on the "View" tab a
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [VS Code](https://code.visualstudio.com)
 - [Cyberduck](https://cyberduck.io/download/)
-- [Vagrant 2.2.7](https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.msi)
+- [Vagrant 2.2.9](https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.msi)
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 - [ConEmu](https://conemu.github.io) - download the "Installer" version
 
@@ -59,13 +59,7 @@ Make sure you're using ConEmu for all command line interactions from now on - **
 - Run:
 
     ```bash
-    curl https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/windows/setup.sh > setup.sh
-    ```
-
-- Run:
-
-    ```bash
-    bash setup.sh
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/windows/setup.sh)"
     ```
 
 - You should see "And we're done!" at the end if everything has worked

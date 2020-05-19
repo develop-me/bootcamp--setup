@@ -22,13 +22,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 - Run:
 
     ```bash
-    curl https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/linux/setup.sh > setup.sh
-    ```
-
-- Run:
-
-    ```bash
-    bash setup.sh
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/linux/setup.sh)"
     ```
 
 - You should see "And we're done!" at the end if everything has worked

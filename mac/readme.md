@@ -15,13 +15,7 @@
 - Run:
 
     ```bash
-    curl https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/mac/setup.sh > setup.sh
-    ```
-
-- Run:
-
-    ```bash
-    bash setup.sh
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/mac/setup.sh)"
     ```
 
 - You should see "And we're done!" at the end if everything has worked
