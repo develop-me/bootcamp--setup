@@ -103,7 +103,8 @@ printf "\e[35m
 
 # separate just incase one install breaks the other
 sudo apt-get install -y git
-sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_version}-mbstring" "php${php_version}-dom"
+sudo apt-get install -y sqlite3
+sudo apt-get install -y "php${php_version}" "php${php_version}-zip" "php${php_version}-mbstring" "php${php_version}-dom" "php${php_version}-sqlite3"
 sudo apt-get install -y gcc make ruby ruby-dev
 sudo apt-get install -y nodejs
 sudo apt-get install -y zsh
