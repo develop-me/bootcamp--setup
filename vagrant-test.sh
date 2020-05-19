@@ -1,58 +1,37 @@
 set -e
 
-TEST_DIR="$(pwd)/vagrant-tests"
-
-test_files=(
-    "$TEST_DIR/scotch-box/whisky.test"
-    "$TEST_DIR/laravel/app/Http/Controllers/Wombat.php"
-)
-
+START_DIR=$(pwd)
+TEST_DIR="$START_DIR/vagrant-test"
 mkdir "$TEST_DIR"
 
-# Scotch Box
+# create box
 cd "$TEST_DIR" || exit 1
-git clone https://github.com/scotch-io/scotch-box
-cd "$TEST_DIR/scotch-box" || exit 1
-vagrant up
-vagrant ssh -c "cd /var/www && echo '<?php echo \"Whisky\";' | php > whisky.test"
 
-# Homestead
-cd "$TEST_DIR" || exit 1
-composer global require laravel/installer
-laravel new laravel
-cd "$TEST_DIR/laravel" || exit 1
+echo 'Vagrant.configure("2") do |config|
+    config.vm.box = "laravel/homestead"
+    config.vm.synced_folder ".", "/home/vagrant/code"
+end' > Vagrantfile
 
-composer require laravel/homestead
-vendor/bin/homestead make
 vagrant up
-vagrant ssh -c "cd code && php artisan make:controller Wombat"
+vagrant ssh -c "cd /home/vagrant/code && echo '<?php echo \"Success\";' | php > vagrant.md"
 
 # Test
-for i in "${test_files[@]}"
-do
-    if [ ! -f "$i" ]; then
-        exit 1
-    fi
-done
+if [ "$(cat "$TEST_DIR/vagrant.md")" != "Success" ]; then
+    exit 1
+fi
 
 # tidy up
-cd "$TEST_DIR/scotch-box" || exit 1
 vagrant destroy -f
-
-cd "$TEST_DIR/laravel" || exit 1
-vagrant destroy -f
-
-rm -rf "$TEST_DIR/scotch-box"
-rm -rf "$TEST_DIR/laravel"
+cd "$START_DIR" || exit 1
+rm -rf "$TEST_DIR"
 
 # if we get here, everything has worked
-printf "\e[34m
+printf "\e[32m
 
 ==============================
 
           Success!!
 
 ==============================
-
- \e[39m
+\e[39m
 "
