@@ -198,10 +198,6 @@ done
 # add check alias
 printf "\nalias weallgood=\"echo 'We all good! \\(^o^)/'\"" >> "$HOME/.zshrc"
 
-# remove setup script
-rm setup.sh
-
-
 printf "\e[35m
 
  —————————————————————————————————————————————————————
