@@ -11,6 +11,14 @@ There are a few settings that will make your life much easier:
 
 You can set these by opening Windows Explorer and then click on the "View" tab and choosing "Options -> Change folder and search options". In the list of options choose "Show hidden files, folders and drives" and untick "Hide extensions for known file types".
 
+## Virtualisation
+
+To run Vagrant in the latter part of the course, you'll need to have "Virtualisation" enabled on your machine. You can check if this is turned on by opening "Task Manager" (use Search to find this) and clicking on the "Performance" tab. You should hopefully see "Virtualisation: Enabled":
+
+![Virtualisation Enabled](img/virtualisation.jpg)
+
+If Virtualisation is not enabled you will need to [enable it in your BIOS/UEFI](https://www.isumsoft.com/computer/enable-virtualization-technology-vt-x-in-bios-or-uefi.html).
+
 ## Download and install
 
 - [Firefox](https://www.mozilla.org/firefox)
