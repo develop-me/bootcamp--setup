@@ -5,9 +5,9 @@ set -e
 
 # ===============================================================
 
-vagrant_version="2.2.7"
+vagrant_version="2.2.9"
 php_version="7.4"
-node_version="12.x"
+node_version="14.x"
 
 vagrant_plugins=(
     vagrant-vbguest
