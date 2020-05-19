@@ -9,11 +9,6 @@ vagrant_version="2.2.7"
 php_version="7.4"
 node_version="12.x"
 
-vagrant_boxes=(
-    scotch/box
-    laravel/homestead
-)
-
 vagrant_plugins=(
     vagrant-vbguest
     vagrant-hostsupdater
@@ -188,8 +183,7 @@ fi
 # do rest of stuff that takes ages
 printf "\e[35m
 
- Stage 7: Downloading Vagrant boxes
- (This part can take a while and isn't essential)
+ Stage 7: Setting Up Vagrant
 
  \e[39m
 "
@@ -199,21 +193,14 @@ do
     vagrant plugin install "$i"
 done
 
+# ===============================================================
+
 # add check alias
 printf "\nalias weallgood=\"echo 'We all good! \\(^o^)/'\"" >> "$HOME/.zshrc"
-
-# add vagrant boxes
-for i in "${vagrant_boxes[@]}"
-do
-    if ! vagrant box list | grep "$i" > /dev/null ; then
-        vagrant box add "$i" --provider virtualbox
-    fi
-done
 
 # remove setup script
 rm setup.sh
 
-# ===============================================================
 
 printf "\e[35m
 

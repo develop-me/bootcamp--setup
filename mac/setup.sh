@@ -35,11 +35,6 @@ npm=(
     sass
 )
 
-vagrant_boxes=(
-    scotch/box
-    laravel/homestead
-)
-
 vagrant_plugins=(
     vagrant-vbguest
     vagrant-hostsupdater
@@ -265,7 +260,7 @@ fi
 # do rest of vagrant stuff that takes ages
 printf "\e[34m
 
- Stage 8: Downloading Vagrant boxes
+ Stage 8: Setting Up Vagrant
 
  \e[39m
 "
@@ -275,19 +270,11 @@ do
     vagrant plugin install "$i"
 done
 
-# add check alias
-printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
-
-
-# add vagrant boxes
-for i in "${vagrant_boxes[@]}"
-do
-    if ! vagrant box list | grep "$i" > /dev/null ; then
-        vagrant box add "$i" --provider virtualbox
-    fi
-done
 
 # ===============================================================
+
+# add check alias
+printf "\nalias weallgood=\"echo 'We all good 👍'\"" >> "$HOME/.zshrc"
 
 # remove setup script
 rm setup.sh
