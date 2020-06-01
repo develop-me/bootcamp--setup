@@ -48,7 +48,7 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 - In the window that appears tick the box named "Windows Subsystem for Linux", then click on "OK"
 - Restart your computer
 
-After your computer has restarted, [follow this link to the Windows Store and choose Ubuntu](https://aka.ms/wslstore). Once that is done click on "Launch" and follow the instructions below:
+After your computer has restarted, install [Ubuntu 18.04](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q) (Ubuntu 20.04 currently untested). Once that is done click on "Launch" and follow the instructions below:
 
 - When prompted, enter a username: this should be all lowercase with no spaces
 - When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security) - AND REMEMBER IT, you'll need this later
