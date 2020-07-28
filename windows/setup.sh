@@ -203,6 +203,9 @@ printf "\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.zshenv"
 sed -i 's/plugins=(git)/plugins=(git composer git-flow gulp homestead laravel node npm vagrant)/g' "$HOME/.zshrc"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="candy"/g' "$HOME/.zshrc"
 
+# allows chmod and such to run from WSL in all directories
+sudo sh -c "printf '[automount]\noptions = \"metadata\"' > '/etc/wsl.cnf'"
+
 # ===============================================================
 
 # do rest of vagrant stuff that takes ages
