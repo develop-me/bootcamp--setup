@@ -1,6 +1,6 @@
 # Setting up Windows
 
-**Make sure you're running the latest version of Windows 10. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work. You should *always* keep your operating system and software up to date.**
+**Make sure you're running the latest version of Windows 10 Pro. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work. You should *always* keep your operating system and software up to date.**
 
 ## Settings
 
@@ -21,26 +21,22 @@ If Virtualisation is not enabled you will need to [enable it in your BIOS/UEFI](
 
 ## Download and install
 
+- [VS Code](https://code.visualstudio.com)
 - [Firefox](https://www.mozilla.org/firefox)
 - [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html): for using ChromeCast
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
-- [VS Code](https://code.visualstudio.com)
 - [Cyberduck](https://cyberduck.io/download/)
 - [Vagrant 2.2.9](https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.msi)
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
-- [ConEmu](https://conemu.github.io) - download the "Installer" version
 
-## VS Code Settings
-
-Open VS Code then go to `File > Preferences > Settings`. Then click on the small icon of a piece of paper being turned around (top right of the window, left-most icon). Now copy in the [settings](../vscode.json).
 
 ## Set up a GitHub account
 
 You can [sign up here](https://github.com/join) (the free plan is fine).
 
-## Setting up Bash for Windows
+## Setting up Windows Subsystem for Linux (WSL)
 
-**Make sure that Vagrant and ConEmu are installed before continuing.**
+**Make sure that Vagrant and VS Code are installed before continuing.**
 
 - Type "developers" into the search bar, then click on "For developers settings"
 - In the window that appears select "Developer Mode", then click on "Yes" when prompted
@@ -50,31 +46,43 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 
 After your computer has restarted, install [Ubuntu 18.04](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q) (Ubuntu 20.04 currently untested). Once that is done click on "Launch" and follow the instructions below:
 
+- You may need to press Enter to kick things off
 - When prompted, enter a username: this should be all lowercase with no spaces
 - When prompted, enter a password: you'll have to type this quite a lot, so pick something memorable (don't worry if it doesn't look like you're typing anything, this is for security) - AND REMEMBER IT, you'll need this later
-- Now type `exit`, this will close the Ubuntu app
-- Now start ConEmu
-- When ConEmu first loads select `{Bash::bash}` as the startup task (If `{Bash:bash}` is not an option then please talk to one of the instructors, otherwise everything else will fail)
-
-    ![ConEmu Setup Screen](conemu.png)
-
-
-## Installing command line tools
-
-Make sure you're using ConEmu for all command line interactions from now on - **do not** use the Ubuntu terminal.
-
-- Load ConEmu
-- Run:
+- Now, run the setup script:
 
     ```bash
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/windows/setup.sh)"
     ```
 
 - You should see "And we're done!" at the end if everything has worked
-
-- Close ConEmu
-
-- Re-open ConEmu and type in `weallgood`. You should get a "We all good!" message in response.
+- Close Ubuntu
+- Re-open Ubuntu and type in `weallgood`. You should get a "We all good!" message in response.
 
 
-**You should use ConEmu for all command line code throughout the course - if you use Git Bash or other command line interfaces you won't have everything you need installed. We suggest pinning ConEmu to the Task Bar - you'll be using it a lot**
+## Setting Up VS Code
+
+You should use VS Code's built-in terminal for any command-line work: `Ctrl + Shift + '`
+
+- Open VS Code
+- When it first loads it should offer to install the "Remote - WSL" extension. You should install this.
+    - If this hasn't happened press `Ctrl + Shift + X` to load the Extensions view and search for "Remote - WSL" and then install it
+- Go to `File > Preferences > Settings`. Then click on the small icon of a piece of paper being turned around (top right of the window, left-most icon). Now copy in the [settings](../vscode.json).
+
+### Working with WSL and VS Code
+
+**You need to make sure you always work in WSL Remote mode, otherwise things won't work properly**
+
+Check that you've got the WSL Remote icon in the bottom left corner:
+
+![WSL Remote Button](img/wsl-remote-on.jpg)
+
+If you haven't:
+
+- Click on the little green symbol in the bottom left corner
+
+    ![WSL Button](img/wsl-button.jpg)
+
+- Select "Reopen Folder in WSL" if you already have a folder open (or "New Window" if not)
+
+[Some more info about WSL Remote](https://devblogs.microsoft.com/commandline/tips-and-tricks-for-linux-development-with-wsl-and-visual-studio-code/)
