@@ -2,7 +2,7 @@ set -e
 
 START_DIR=$(pwd)
 TEST_DIR="$START_DIR/vagrant-test"
-mkdir "$TEST_DIR"
+mkdir -p "$TEST_DIR"
 
 # create box
 cd "$TEST_DIR" || exit 1
