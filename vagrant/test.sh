@@ -13,6 +13,18 @@ echo 'Vagrant.configure("2") do |config|
 end' > Vagrantfile
 
 vagrant up
+
+printf "\e[35m
+
+------------------------------------------------
+
+ If you are asked for a password, it's \"vagrant\"
+
+-----------------------------------------------
+
+ \e[39m
+"
+
 vagrant ssh -c "cd /home/vagrant/code && echo '<?php echo \"Success\";' | php > vagrant.md"
 
 # Test
