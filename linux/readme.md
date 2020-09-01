@@ -12,10 +12,6 @@ If you're running a different distribution of Linux, let us know and we'll panic
 - [VS Code](https://code.visualstudio.com)
 - [FileZilla](https://filezilla-project.org/download.php?show_all=1)
 
-## Set up a GitHub account
-
-You can [sign up here](https://github.com/join) (the free plan is fine).
-
 ## Installing command line tools
 
 - Load Terminal
@@ -30,3 +26,10 @@ You can [sign up here](https://github.com/join) (the free plan is fine).
 - Close Terminal
 
 - Re-open Terminal and type in `weallgood`. You should get a "We all good!" message in response.
+
+
+## Set up a GitHub account
+
+You can [sign up here](https://github.com/join) (the free plan is fine).
+
+Then re-open Terminal and run through the [Tooling Choose Your Own Adventure Guide](https://github.com/develop-me/bootcamp--week-05--tooling/blob/master/challenges/00/05-ssh-authentication.md)
