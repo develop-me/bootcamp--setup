@@ -30,10 +30,6 @@ If Virtualisation is not enabled you will need to [enable it in your BIOS/UEFI](
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
 
-## Set up a GitHub account
-
-You can [sign up here](https://github.com/join) (the free plan is fine).
-
 ## Setting up Windows Subsystem for Linux (WSL)
 
 **Make sure that Vagrant and VS Code are installed before continuing.**
@@ -58,6 +54,13 @@ After your computer has restarted, install [Ubuntu 18.04](https://www.microsoft.
 - You should see "And we're done!" at the end if everything has worked
 - Close Ubuntu
 - Re-open Ubuntu and type in `weallgood`. You should get a "We all good!" message in response.
+
+
+## Set up a GitHub account
+
+You can [sign up here](https://github.com/join) (the free plan is fine).
+
+Then reopen the Ubuntu app and run through the [Tooling Choose Your Own Adventure Guide](https://github.com/develop-me/bootcamp--week-05--tooling/blob/master/challenges/00/05-ssh-authentication.md)
 
 
 ## Setting Up VS Code
