@@ -19,6 +19,12 @@ To run Vagrant in the latter part of the course, you'll need to have "Virtualisa
 
 If Virtualisation is not enabled you will need to [enable it in your BIOS/UEFI](https://www.isumsoft.com/computer/enable-virtualization-technology-vt-x-in-bios-or-uefi.html).
 
+
+## Virgin Broadband
+
+If you're using Virgin Broadband you will need to [disable "Virus Safe"](https://my.virginmedia.com/my-apps/onlinesecurity/websafe/settings) before running the setup script. Unfortunately they're a bit over-zealous and block *all* GitHub traffic, which probably stops one or two bits of malicious code, but also stops all of the code that we need!
+
+
 ## Download and install
 
 - [VS Code](https://code.visualstudio.com)
