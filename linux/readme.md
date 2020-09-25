@@ -4,6 +4,12 @@
 
 If you're running a different distribution of Linux, let us know and we'll panic a bit and then try and get something working.
 
+
+## Virgin Broadband
+
+If you're using Virgin Broadband you will need to [disable "Virus Safe"](https://my.virginmedia.com/my-apps/onlinesecurity/websafe/settings) before running the setup script. Unfortunately they're a bit over-zealous and block *all* GitHub traffic, which probably stops one or two bits of malicious code, but also stops all of the code that we need!
+
+
 ## Download and install
 
 - [Firefox](https://www.mozilla.org/firefox)
