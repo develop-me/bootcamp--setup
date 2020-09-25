@@ -31,7 +31,7 @@ cli=(
 )
 
 npm=(
-    grunt-cli
+    gulp-cli
     sass
 )
 
