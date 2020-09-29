@@ -152,7 +152,9 @@ printf "\e[35m
  \e[39m
 "
 
-ssh-keygen -q -N "" -f "$HOME/.ssh/id_rsa"
+if [ ! -f "$HOME/.ssh/id_rsa" ]; then
+    ssh-keygen -q -t rsa -b 4096 -N "" -C "" -f "$HOME/.ssh/id_rsa"
+fi
 
 # ===============================================================
 

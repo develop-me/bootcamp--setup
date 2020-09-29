@@ -187,10 +187,24 @@ done
 
 # ===============================================================
 
+# ssh key
+printf "\e[35m
+
+ Stage 5: Creating SSH key...
+
+ \e[39m
+"
+
+if [ ! -f "$HOME/.ssh/id_rsa" ]; then
+    ssh-keygen -q -t rsa -b 4096 -N "" -C "" -f "$HOME/.ssh/id_rsa"
+fi
+
+# ===============================================================
+
 # zsh
 printf "\e[34m
 
- Stage 5: Setting up ZSH...
+ Stage 6: Setting up ZSH...
 
  \e[39m
 "
@@ -227,7 +241,7 @@ rm "$HOME/.zshrc.original"
 
 printf "\e[34m
 
- Stage 6: Configuring Finder...
+ Stage 7: Configuring Finder...
 
  \e[39m
 "
@@ -245,7 +259,7 @@ ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud"
 # sort out VS Code
 printf "\e[34m
 
- Stage 7: Setting VS Code defaults
+ Stage 8: Setting VS Code defaults
 
  \e[39m
 "
@@ -260,7 +274,7 @@ fi
 # do rest of vagrant stuff that takes ages
 printf "\e[34m
 
- Stage 8: Setting Up Vagrant
+ Stage 9: Setting Up Vagrant
 
  \e[39m
 "

@@ -117,10 +117,25 @@ chmod o-w -R "$HOME/.config"
 
 # ===============================================================
 
+# ssh key
+printf "\e[35m
+
+ Stage 4: Creating SSH key...
+
+ \e[39m
+"
+
+if [ ! -f "$HOME/.ssh/id_rsa" ]; then
+    ssh-keygen -q -t rsa -b 4096 -N "" -C "" -f "$HOME/.ssh/id_rsa"
+fi
+
+
+# ===============================================================
+
 # vagrant
 printf "\e[35m
 
- Stage 4: Installing Vagrant...
+ Stage 5: Installing Vagrant...
 
  \e[39m
 "
@@ -134,7 +149,7 @@ rm "vagrant_${vagrant_version}_x86_64.deb"
 # zsh
 printf "\e[35m
 
- Stage 5: Setting up ZSH...
+ Stage 6: Setting up ZSH...
 
  \e[39m
 "
@@ -168,7 +183,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 # sort out VS Code
 printf "\e[34m
 
- Stage 6: Setting VS Code defaults
+ Stage 7: Setting VS Code defaults
 
  \e[39m
 "
@@ -183,7 +198,7 @@ fi
 # do rest of stuff that takes ages
 printf "\e[35m
 
- Stage 7: Setting Up Vagrant
+ Stage 8: Setting Up Vagrant
 
  \e[39m
 "
