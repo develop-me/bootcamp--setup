@@ -98,7 +98,7 @@ printf "\e[35m
  \e[39m
 "
 
-mkdir -m 775 "$HOME/bin"
+mkdir -p -m 775 "$HOME/bin"
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

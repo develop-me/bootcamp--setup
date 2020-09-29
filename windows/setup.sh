@@ -124,7 +124,7 @@ printf "\e[35m
  \e[39m
 "
 
-mkdir -m 775 "$HOME/bin"
+mkdir -p -m 775 "$HOME/bin"
 sudo chown "$USER":"$USER" -R "$HOME/.config"
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
