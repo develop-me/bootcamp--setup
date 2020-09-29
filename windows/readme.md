@@ -57,6 +57,10 @@ After your computer has restarted, install [Ubuntu 18.04](https://www.microsoft.
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/windows/setup.sh)"
     ```
 
+    At various points you'll be asked for your password – this is necessary to install certain apps outside of your home directory.
+
+    **When you enter a password on the command-line it won't look like you're typing anything, but you are. Press Enter when you're done.**
+
 - You should see "And we're done!" at the end if everything has worked
 - Close Ubuntu
 - Re-open Ubuntu and type in `weallgood`. You should get a "We all good!" message in response.

@@ -27,6 +27,10 @@ If you're using Virgin Broadband you will need to [disable "Virus Safe"](https:/
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/develop-me/bootcamp--setup/master/linux/setup.sh)"
     ```
 
+    At various points you'll be asked for your password – this is necessary to install certain apps outside of your home directory.
+
+    **When you enter a password on the command-line it won't look like you're typing anything, but you are. Press Enter when you're done.**
+
 - You should see "And we're done!" at the end if everything has worked
 
 - Close Terminal

@@ -124,7 +124,7 @@ printf "\e[35m
  \e[39m
 "
 
-mkdir -m 775 "$HOME/bin"
+mkdir -p -m 775 "$HOME/bin"
 sudo chown "$USER":"$USER" -R "$HOME/.config"
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
@@ -152,7 +152,9 @@ printf "\e[35m
  \e[39m
 "
 
-ssh-keygen -q -N "" -f "$HOME/.ssh/id_rsa"
+if [ ! -f "$HOME/.ssh/id_rsa" ]; then
+    ssh-keygen -q -t rsa -b 4096 -N "" -C "" -f "$HOME/.ssh/id_rsa"
+fi
 
 # ===============================================================
 
