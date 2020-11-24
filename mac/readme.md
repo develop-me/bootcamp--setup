@@ -1,5 +1,7 @@
 # Setting up Mac OS X
 
+**The software we use on the course does not currently support ARM Macs (2020 MacBook Air, 2020 MacBook Pro 13", 2020 Mac Mini)**
+
 **Make sure you're running the latest version of macOS. If you are not then be sure to run the latest updates and restart your machine. If you do not do this some of the steps below may not work. You should *always* keep your operating system and software up to date.**
 
 
