@@ -32,7 +32,7 @@ If you're using Virgin Broadband you will need to [disable "Virus Safe"](https:/
 - [Chrome](https://www.google.co.uk/chrome/browser/desktop/index.html): for using ChromeCast
 - [Slack](https://slack.com/) our Slack Organisation is `developme` so [developme.slack.com](https://developme.slack.com/)
 - [Cyberduck](https://cyberduck.io/download/)
-- [Vagrant 2.2.9](https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.msi)
+- [Vagrant 2.2.14](https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.msi)
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
 

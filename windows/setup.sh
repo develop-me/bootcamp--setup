@@ -5,7 +5,7 @@ set -e
 
 # ===============================================================
 
-vagrant_version="2.2.9"
+vagrant_version="2.2.14"
 php_version="7.4"
 node_version="14.x"
 
