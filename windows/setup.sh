@@ -5,7 +5,7 @@ set -e
 
 # ===============================================================
 
-vagrant_version="2.2.9"
+vagrant_version="2.2.14"
 php_version="7.4"
 node_version="14.x"
 
@@ -196,7 +196,7 @@ rm ohmyzsh.sh
 printf "\nif test -t 1; then\n  exec zsh\nfi" >> "$HOME/.bashrc"
 
 # add directories to PATH
-printf "\nexport PATH=\"\$HOME/bin:\$HOME/.config/composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:\$PATH\"" >> "$HOME/.zshenv"
+printf "\nexport PATH=\"\$HOME/bin:\$HOME/.config/composer/vendor/bin:\$HOME/.composer/vendor/bin:/mnt/c/Program Files/Oracle/VirtualBox/:\$PATH\"" >> "$HOME/.zshenv"
 
 # sort out Vagrant WSL stuff
 printf "\nexport VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=\"1\"" >> "$HOME/.zshenv"
