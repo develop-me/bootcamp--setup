@@ -48,6 +48,27 @@ Remove disk in: Virtual Media Manager » Hard Disks
 
 ## Windows
 
+### Vagrant Version Mismatch
+
+```
+Vagrant cannot currently enable access to manage machines within the Windows
+environment because the version of Vagrant installed on Windows does not
+match this version of Vagrant running within the Windows Subsystem for Linux.
+Please ensure both installation of Vagrant are the same. If you do not want
+update your Vagrant installations you can disable Windows access by unsetting
+the `VAGRANT_WSL_ACCESS_WINDOWS_USER` environment variable.
+Windows Vagrant version: 2.2.14
+Windows Subsystem for Linux Vagrant version: 2.2.9
+```
+
+Just need to install the matching version on Linux (where XXX is the Windows version, e.g. `2.2.14`):
+
+```bash
+wget "https://releases.hashicorp.com/vagrant/XXX/vagrant_XXX_x86_64.deb"
+sudo dpkg -i "vagrant_XXX_x86_64.deb"
+rm "vagrant_XXX_x86_64.deb"
+```
+
 ### The private key to connect to the machine via SSH must be owned
 by the user running Vagrant.
 
