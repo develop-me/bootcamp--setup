@@ -45,6 +45,28 @@ Then restart VirtualBox:
 
 `sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist`
 
+### Start VM Headless
+
+```
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "34aac556-d409-47f6-aad8-af63db5c85b7", "--type", "headless"]
+
+Stderr: VBoxManage: error: The virtual machine 'vagrant-test_default_1612892423317_59961' has terminated unexpectedly during startup with exit code 1 (0x1)
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
+```
+
+See previous issue.
+
+If that doesn't work, uninstall and reinstall VirtualBox.
+
+- [Download latest version](https://www.virtualbox.org/wiki/Downloads) – "OS X hosts"
+- Open downloaded image
+- Run `bash /Volumes/VirtualBox/VirtualBox_Uninstall.tool` in the terminal
+- Restart machine
+- Reinstall using the installer on the downloaded image
+
 
 ### failed to create virtualbox object cannot register hard disk
 
