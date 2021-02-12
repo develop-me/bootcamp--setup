@@ -121,6 +121,30 @@ mv .vagrant ~/.{project-name}-vagrant
 ln -sv ~/.{project-name}-vagrant .vagrant
 ```
 
+### All the hard drives
+
+```
+An error occurred while executing a PowerShell script. This error
+is shown below. Please read the error message and see if this is
+a configuration error with your system. If it is not, then please
+report a bug.
+
+Script: check_hyperv_access.ps1
+Error:
+
+Get-ACL : Method failed with unexpected error code 1.
+At \\wsl$\Ubuntu-18.04\opt\vagrant\embedded\gems\2.2.14\gems\vagrant-2.2.14\plugins\providers\hyperv\scripts\utils\VagrantVM\VagrantVM.psm1:731 char:12
++     $acl = Get-ACL -Path $Path
++            ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-Acl], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.PowerShell.Commands.GetAclCommand
+```
+
+If Vagrant is installed on a different hard-drive, WSL gets really confused.
+
+Make sure that everything is installed and running from the same hard-drive (`C:\` is easiest). So their projects should all be in `/mnt/c` and Windows Vagrant should be installed somewhere on `C:\`.
+
+
 ### Misc Issues, SSH times out, or Virtualization not enabled
 
 1. Right-click any space on the taskbar and select Task Manager to open it.
